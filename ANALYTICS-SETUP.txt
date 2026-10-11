@@ -1,0 +1,33 @@
+GA4 LOCAL DRAFT — NOT ENABLED OR PUBLISHED
+
+Base: c96201ea5d391681815cae9873342f060b91f8fd (hero optimization and clean bilingual routes).
+No existing analytics tag, consent banner or privacy notice was found.
+
+RELEASE GATES
+1. Obtain the confirmed GA4 measurement ID from the account/property worker. No production ID is assumed.
+2. Approve the bilingual consent text and 180-day choice/cookie duration, and provide published English/Spanish privacy notice URLs. The draft deliberately does not invent a full privacy policy or legal promises.
+3. In the web stream, disable Enhanced Measurement (including form interactions, outbound clicks, site search and history-based page changes) to prevent duplicate or unintended events. Disable Google signals, user-provided data and advertising personalization. Do not link Ads or enable advertising features.
+4. Mark generate_lead as a key event. Register event-scoped custom dimensions only as needed: site_language, page_id, destination_page, destination_language, navigation_type, link_domain, form_id.
+5. Fill assets/analytics-config.js with the confirmed ID and approved notice URLs, then enable only after review. Empty ID, disabled config or missing notice means no UI, no Google requests and no tracking.
+6. Fetch latest main immediately before integration. Preserve concurrent hero edits and clean routes; never force push. Re-run Formspree and analytics tests, inspect the diff, then publish only with authorization.
+
+PROPOSED CONSENT DESIGN
+Basic consent mode globally. The Google script is not inserted before opt-in; rejection does not send cookieless pings. Equal Accept/Reject buttons, bilingual copy, a privacy-notice link and a persistent settings control. Choice is saved locally for 180 days. If storage is blocked the choice applies only to the current page. Withdrawal disables GA, clears accessible GA cookies and reloads without the tag. Withdrawal in another tab also stops this tab. Advertising consent remains denied.
+
+EVENTS
+- Exactly one explicit page_view per consented document load; send_page_view:false disables config's automatic pageview. Referrer is reduced to origin (or a known internal route). Page location uses a known clean path without query/hash; title is a fixed page label. Arbitrary URL paths and form data never enter custom events.
+- GA's automatic session/user engagement provides engagement time after consent. Custom scroll_depth fires once at 90%; Enhanced Measurement scroll must stay off.
+- internal_navigation records a fixed destination page label and page/section type. language_switch records only en/es. outbound_click records only destination hostname. email_click records no recipient, subject or body.
+- generate_lead records only form_id, fixed page_id and site_language after the existing Formspree handler receives response.ok. It does not fire on native validation, server/network errors or repeated submissions. Success without consent is not stored/replayed after later consent.
+- No names, emails, company names, phone numbers, products, quantities, free text or other field values are read by analytics code. No user ID or user properties are set. Actual Formspree delivery still requires separate inbox confirmation.
+
+LIMITS
+Consent-mode behavior alone is not a legal compliance certification. The owner must approve the notice and regional policy. GA reporting only covers consenting visitors and may be reduced by blockers. Mocked Google scripts validate local event contracts, not account/property reporting or Google-managed automatic events. Confirm stream settings before activation and validate with the real approved ID afterward.
+
+OFFICIAL REFERENCES
+https://developers.google.com/tag-platform/security/concepts/consent-mode
+https://developers.google.com/tag-platform/security/guides/consent
+https://developers.google.com/analytics/devguides/collection/ga4/views
+https://developers.google.com/analytics/devguides/collection/ga4/reference/config
+https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead
+https://support.google.com/analytics/answer/9216061

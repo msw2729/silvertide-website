@@ -2,13 +2,15 @@
 
 Static bilingual site using the bundled DCLogic/React runtime. Serve this directory with a static web server; no build or external form SDK is required.
 
+Analytics preparation is disabled pending the confirmed GA4 ID, consent choices and privacy notices. See [ANALYTICS-SETUP.txt](ANALYTICS-SETUP.txt) for the release gates and event contract. Run `node tests/analytics.cjs` for isolated tests with all Google and Formspree requests mocked.
+
 ## Contact forms
 
 `/contact/` and `/es/contacto/` POST all seven existing fields to `https://formspree.io/f/xppqljkw`. The DCLogic submit handler uses native `fetch`, `FormData`, and `Accept: application/json`. Localized status text is announced in a live region and focused after completion. Required name, email and message fields retain native browser validation.
 
 Submission is locked while pending and after success. Errors and the 30-second timeout retain inputs and allow a manual retry; there are no automatic retries. A timed-out request may have reached Formspree, so the error says confirmation was unavailable. After success, “Send another enquiry” clears the form deliberately. HTTP success confirms endpoint acceptance, not inbox delivery.
 
-The endpoint's target inbox, verification, domain restrictions and spam/CAPTCHA settings are managed in the Formspree dashboard. No recipient override or private inbox address is embedded in the site. Dashboard routing and real email delivery have not been verified. All existing direct email links, including About and Careers, remain unchanged.
+The endpoint's target inbox, verification, domain restrictions and spam/CAPTCHA settings are managed in the Formspree dashboard. No recipient override or private inbox address is embedded in the site. Michael confirmed receipt of the authorized live test on October 11, 2026; the dashboard settings were not separately inspected. All existing direct email links, including About and Careers, remain unchanged.
 
 The form keeps standard HTML `action` and `method` attributes, but this exported site's DCLogic runtime is required to render the interactive site. Do not describe the whole site as a JavaScript-free fallback.
 

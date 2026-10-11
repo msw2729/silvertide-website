@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="/assets/button-states.b2f3a96f4245.css">
 <link rel="stylesheet" href="/assets/responsive.01da4bc000c3.css">
 <script defer src="/assets/site-navigation.0ca810fb5122.js"></script>
+<link rel="stylesheet" href="/assets/analytics.css">
+<script defer src="/assets/analytics-config.js"></script>
+<script defer src="/assets/analytics.js"></script>
 </head>
 <body>
 <x-dc>
@@ -468,6 +471,7 @@ class Component extends DCLogic {
         return;
       }
       this.setState({ enquirySent: true, enquiryStatus: "Gracias. Tu consulta se ha enviado." });
+      document.dispatchEvent(new Event('silvertide:enquiry-success'));
     } catch (_) {
       this.setState({ enquiryStatus: "No pudimos confirmar el envío. Tus datos siguen aquí. Inténtalo de nuevo o utiliza la dirección de correo que aparece a continuación." });
     } finally {
