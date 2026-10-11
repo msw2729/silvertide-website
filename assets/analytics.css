@@ -9,4 +9,6 @@
 .analytics-consent :focus-visible,.analytics-settings:focus-visible{outline:3px solid #2E7BD6;outline-offset:3px}
 .analytics-settings{position:fixed;left:12px;bottom:12px;font-size:13px}
 .analytics-consent[hidden],.analytics-settings[hidden]{display:none}
+.privacy-policy{background:#fff;color:#07193A;padding:64px clamp(16px,2.4vw,32px);scroll-margin-top:100px;position:relative;z-index:1}
+.privacy-policy>div{max-width:900px;margin:auto}.privacy-policy h2{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:0 0 24px}.privacy-policy p,.privacy-form-note{font-size:15px;line-height:1.65;margin:0 0 20px}.privacy-policy a,.privacy-form-note a{color:#0B2A5E;text-decoration:underline}.privacy-policy a:focus-visible,.privacy-form-note a:focus-visible{outline:3px solid #2E7BD6;outline-offset:3px}
 @media(max-width:480px){.analytics-consent{padding:18px;left:8px;right:8px;bottom:8px}.analytics-actions button{flex:1 1 140px}}

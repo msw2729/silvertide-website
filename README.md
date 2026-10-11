@@ -2,7 +2,7 @@
 
 Static bilingual site using the bundled DCLogic/React runtime. Serve this directory with a static web server; no build or external form SDK is required.
 
-Analytics preparation contains confirmed measurement ID `G-MP521GB8WR` and remains disabled pending approved bilingual privacy/consent notices and the company's inquiry retention rule. See [ANALYTICS-SETUP.txt](ANALYTICS-SETUP.txt) for verified account settings, release gates and the event contract. Run `node tests/analytics.cjs` for isolated tests with all Google and Formspree requests mocked.
+Analytics uses confirmed measurement ID `G-MP521GB8WR` only after explicit opt-in. English and Spanish privacy sections at `/contact/#privacy` and `/es/contacto/#privacy` are linked from forms and every footer. The approved inquiry retention policy is 180 days after receipt, separately from the 180-day remembered analytics choice. Publishing this policy does not automate deletion: the company must remove expired inquiry records from Formspree and email. See [ANALYTICS-SETUP.txt](ANALYTICS-SETUP.txt) for account settings and the event contract. Run `node tests/analytics.cjs` for isolated tests with all Google and Formspree requests mocked.
 
 ## Contact forms
 

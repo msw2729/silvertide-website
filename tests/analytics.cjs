@@ -4,6 +4,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const root=path.resolve(__dirname,'..');
 const confirmedId='G-MP521GB8WR';
+const productionConfig=fs.readFileSync(path.join(root,'assets/analytics-config.js'),'utf8');
 assert.match(fs.readFileSync(path.join(root,'assets/analytics-config.js'),'utf8'), /measurementId: 'G-MP521GB8WR'/);
 const server=http.createServer((req,res)=>{
  let file=path.resolve(root,'.'+new URL(req.url,'http://localhost').pathname);
@@ -24,7 +25,7 @@ const server=http.createServer((req,res)=>{
    page.on('pageerror',e=>errors.push(e.message));
    await context.route('**/*',async r=>{
     const url=r.request().url();
-    if(url===base+'/assets/analytics-config.js'&&enabled)return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-MP521GB8WR",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
+    if(url===base+'/assets/analytics-config.js')return r.fulfill({contentType:'text/javascript',body:enabled?productionConfig:productionConfig.replace('enabled: true','enabled: false')});
     if(url.startsWith(base+'/'))return r.continue();
     if(url.startsWith('https://www.googletagmanager.com/gtag/js')){google++;return r.fulfill({contentType:'text/javascript',body:'/* mock Google tag; deliberately no network or cookies */'});}
     if(url==='https://formspree.io/f/xppqljkw'){posts++;return r.fulfill({status,contentType:'application/json',body:JSON.stringify({ok:status===200})});}
@@ -37,6 +38,9 @@ const server=http.createServer((req,res)=>{
    enabled=true;await visit();
    assert.equal(google,0);assert.deepEqual(await context.cookies(),[]);
    const panel=page.locator('#analytics-consent');
+   assert.equal(await panel.locator('a').getAttribute('href'),locale==='en'?'/contact/#privacy':'/es/contacto/#privacy');
+   assert.match(await page.locator('#dc-root #privacy').innerText(),/180/);
+   assert.equal(await page.locator('#dc-root form a[href="#privacy"]').count(),1);
    assert.equal(await panel.isVisible(),true,JSON.stringify(await page.evaluate(()=>({config:window.silverTideAnalyticsConfig,installed:window.__silverTideAnalyticsInstalled,root:document.querySelector('#dc-root')?.outerHTML.slice(0,200),panel:document.querySelector('#analytics-consent')?.outerHTML,storage:localStorage.length})))+' errors:'+errors.join(','));
    assert.match(await panel.textContent(),locale==='en'?/Analytics cookies/:/Cookies de analítica/);
    if(process.env.QA_SCREENSHOTS)await panel.screenshot({path:path.join(process.env.QA_SCREENSHOTS,'consent-'+locale+'.png')});

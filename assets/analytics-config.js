@@ -1,10 +1,9 @@
-// Release gate: fill only with the confirmed GA4 stream ID and approved notice URLs.
-// Keep disabled until consent wording and GA stream settings have been reviewed.
+// Approved consent-based GA4 setup and bilingual privacy sections.
 window.silverTideAnalyticsConfig = Object.freeze({
-  enabled: false,
+  enabled: true,
   measurementId: 'G-MP521GB8WR',
   // Only reviewed, public campaign labels belong here; never customer identifiers.
   campaignNames: [],
-  privacyNoticeEn: '',
-  privacyNoticeEs: ''
+  privacyNoticeEn: '/contact/#privacy',
+  privacyNoticeEs: '/es/contacto/#privacy'
 });
