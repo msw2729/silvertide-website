@@ -2,7 +2,7 @@
 // Keep disabled until consent wording and GA stream settings have been reviewed.
 window.silverTideAnalyticsConfig = Object.freeze({
   enabled: false,
-  measurementId: '',
+  measurementId: 'G-MP521GB8WR',
   privacyNoticeEn: '',
   privacyNoticeEs: ''
 });
