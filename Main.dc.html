@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate"><head><meta name="viewport" content="width=device-width, initial-scale=1"><script>window.__resources={"https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js":"assets/c4ecec26-9e7e-4dac-8945-89908de48893.js","https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js":"assets/49b3f1d5-0254-4a5b-b30b-6657f0c345e3.js"}</script>
+<meta charset="utf-8">
+<title>Silvertide — Homepage</title>
+<meta name="google" content="notranslate">
+<link rel="alternate" hreflang="en" href="Main.dc.html">
+<link rel="alternate" hreflang="es" href="Main.es.dc.html">
+<script src="assets/a16aa21a-1155-4dfa-9215-2c8d3467b518.js"></script>
+<link rel="stylesheet" href="assets/button-states.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<script defer src="assets/site-navigation.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJMkq1umA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJFkq1umA.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* math */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxI9kq1umA.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxIvkq1umA.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJOkq1umA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuxJPkq1umA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/4f3bcd72-c1c8-436d-87a5-dcb9bd90833a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+@font-face{font-family:"Red Hat Display";font-style:normal;font-weight:500;font-display:swap;src:url("assets/cb92df6e-72e9-4c86-98e1-bceb9ff5d093.woff2") format("woff2")}
+@font-face{font-family:"Red Hat Display";font-style:normal;font-weight:600;font-display:swap;src:url("assets/aeea3bd1-e927-4e02-bfe9-a1c6f5211dc4.woff2") format("woff2")}
+html{scroll-behavior:smooth}
+body{margin:0;background:#07193A;color:#0E1620;font-family:"Red Hat Display","Segoe UI",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:#0B2A5E;text-decoration:none}a:hover{color:#07193A}
+h1,h2,h3{margin:0;font-weight:300;color:#0E1620}
+.over{font-size:12px;font-weight:500;letter-spacing:0.01em;color:#5E6B78}
+.ta{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:15px;font-weight:500;color:inherit}
+.ta svg{transition:transform .25s ease}.ta:hover svg{transform:translateX(4px)}
+.po{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 22px;border-radius:80px;border:1px solid currentColor;font-size:15px;font-weight:500;color:inherit;background:transparent;font-family:inherit;cursor:pointer;transition:background .2s ease,color .2s ease}
+.po svg{transition:transform .25s ease}.po:hover svg{transform:translateX(4px)}
+.po-l:hover{background:#FFFFFF;color:#0B2A5E}
+.po-d:hover{background:#0B2A5E;color:#FFFFFF}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border-radius:1584px;border:0;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s ease}
+.pill-d{background:#07193A;color:#FFFFFF}.pill-d:hover{background:#0B2A5E;color:#FFFFFF}
+.pill-w{background:#FFFFFF;color:#07193A}.pill-w:hover{background:#E9EDF1;color:#07193A}
+.hero-video-toggle{align-self:flex-start;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.5);border-radius:80px;background:rgba(7,25,58,.24);color:#FFFFFF;font:500 12px "Red Hat Display","Segoe UI",Arial,sans-serif;cursor:pointer}
+.hero-video-toggle:hover{background:rgba(7,25,58,.65)}
+.hero-video-toggle:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px}
+.hero-video-toggle:disabled{display:none}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;pointer-events:none}
+.mcard{display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:132px;padding:16px;border-radius:8px;background:#0F2650;color:#FFFFFF;transition:background .2s ease}
+.mcard:hover{background:#163565;color:#FFFFFF}
+.mcard svg{transition:transform .25s ease}.mcard:hover svg{transform:translateX(4px)}
+.hcard{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:20px;box-sizing:border-box;color:#FFFFFF;transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.2,1)}
+.hcard:hover{color:#FFFFFF}
+.dotb{position:relative;flex:1 1 0;height:24px;border:0;padding:0;background:transparent;cursor:pointer}
+.dotb>span{position:absolute;left:0;right:0;top:11px;height:2px;background:rgba(255,255,255,.28);overflow:hidden;border-radius:2px}
+.dotb>span>span{position:absolute;left:0;top:0;bottom:0;background:#FFFFFF}
+.row{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 24px;padding:22px 0;color:#0E1620}
+.row:hover{color:#0E1620}
+.row .arw{transition:transform .25s ease}.row:hover .arw{transform:translateX(6px)}
+.row:hover .rt{color:#0B2A5E}
+.foot{color:#9FB0C0;font-size:14px;padding:6px 0;display:inline-block}.foot:hover{color:#FFFFFF}
+.lbl{font-family:"Red Hat Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.04em;fill:#FFFFFF;paint-order:stroke;stroke:#07193A;stroke-width:3px;stroke-linejoin:round}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.9s}.d4{animation-delay:1.1s}
+.reveal{animation:rise 1s linear none;animation-timeline:view();animation-range:entry 0% entry 30%}
+@keyframes kb{from{transform:scale(1.16)}to{transform:scale(1)}}
+.kb{animation:kb 2.8s cubic-bezier(.16,.8,.2,1) both}
+.mw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.15em;margin-bottom:-.15em}
+.mw>span{display:inline-block;animation:up 1.2s cubic-bezier(.16,.8,.2,1) both}
+@keyframes up{from{transform:translateY(110%)}to{transform:none}}
+.row::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:#C9D2DB;transform-origin:left center;animation:sx linear both;animation-timeline:view();animation-range:entry 10% entry 70%}
+@keyframes sx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* Curtain: the statement panel slides up over the pinned hero (CSS sticky) */
+@keyframes dim{from{opacity:0}to{opacity:.6}}
+.dim{animation:dim linear both;animation-timeline:--curtain;animation-range:entry 0% entry 100%}
+/* Framed card grows to full bleed as it enters */
+@keyframes grow{from{clip-path:inset(0 clamp(16px,3.4vw,48px) round 8px)}to{clip-path:inset(0 0 round 0px)}}
+.grow{animation:grow linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+/* Pinned iris: the team photo opens from a circle while the section is held */
+@keyframes iris{from{clip-path:circle(16% at 66% 46%)}to{clip-path:circle(80% at 50% 50%)}}
+.iris{animation:iris linear both;animation-timeline:--team;animation-range:entry 15% cover 55%}
+@keyframes veil{from{opacity:0}to{opacity:1}}
+.veil{animation:veil linear both;animation-timeline:--team;animation-range:entry 70% cover 55%}
+@keyframes zoomout{from{transform:scale(1.35)}to{transform:scale(1)}}
+.irisimg{animation:zoomout linear both;animation-timeline:--team;animation-range:entry 0% cover 60%}
+/* Footer reveal: wordmark and isotype rise during the last stretch of scroll */
+@keyframes wm{from{transform:translateY(70%)}to{transform:none}}
+.wm{animation:wm linear both;animation-timeline:scroll(root block);animation-range:calc(100% - 620px) 100%}
+@keyframes spin{from{transform:rotate(-14deg) scale(.85);opacity:0}to{transform:none;opacity:1}}
+.iso{animation:spin linear both;animation-timeline:scroll(root block);animation-range:calc(100% - 620px) calc(100% - 200px)}
+@keyframes draw{0%{stroke-dashoffset:1}45%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.route{stroke-dasharray:1;animation:draw 9s ease-in-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.4);opacity:0}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.8s ease-out infinite}
+@keyframes pop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.menu{animation:pop .35s cubic-bezier(.16,.8,.2,1) both}
+@supports not (animation-timeline:view()){.reveal,.row::before,.dim,.grow,.iris,.veil,.irisimg,.wm,.iso{animation:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise,.reveal,.route,.pulse,.kb,.mw>span,.row::before,.dim,.grow,.iris,.veil,.irisimg,.wm,.iso,.menu{animation:none}.hcard{transition:none}}
+</style>
+</helmet>
+
+<div id="top" style="position: relative; width: 100%; box-sizing: border-box; background: #07193A">
+
+  <!-- FIXED NAV PILL — stays top-right through the whole scroll -->
+  <div class="site-nav" style="position: fixed; top: 20px; right: clamp(16px, 2.4vw, 32px); z-index: 50; display: flex; flex-direction: column; align-items: flex-end; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 6px">
+      
+      
+      
+      
+      
+      
+      
+      <!-- LANGUAGE SWITCH -->
+      <nav class="language-switch notranslate" translate="no" aria-label="Language"><a href="Main.dc.html" lang="en" hreflang="en" aria-label="View this page in English" aria-current="page">EN</a><span class="language-divider" aria-hidden="true"></span><a href="Main.es.dc.html" lang="es" hreflang="es" aria-label="View this page in Spanish">ES</a></nav>
+      <!-- /LANGUAGE SWITCH -->
+      <a class="pill pill-w nav-contact" href="Contact.dc.html">Talk to us</a>
+      <button type="button" class="pill pill-d" aria-expanded="{{menuOpen}}" aria-controls="sitemenu" sc-camel-on-click="{{toggleMenu}}">
+        <svg aria-hidden="true" sc-camel-view-box="0 0 160 160" width="16" height="16"><path d="M0 0 H160 V140 C110 140 50 20 0 20 Z" fill="#FFFFFF"></path><path d="M0 38 C50 38 110 158 160 158 V160 H0 Z" fill="#9FB0C0"></path></svg>
+        <span>{{menuLabel}}</span>
+        <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="{{menuIcon}}"></path></svg>
+      </button>
+    </div>
+    <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+      <nav id="sitemenu" class="menu" aria-label="Primary" style="width: min(520px, calc(100vw - 32px)); box-sizing: border-box; padding: 8px; border-radius: 8px; background: #07193A; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <a class="mcard" href="WhatWeDo.dc.html"><span style="font-size: 15px">What we do</span><span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; font-size: 12px; line-height: 1.4; color: #C9D3DD">Sourcing, contracts, storage, shipping, delivery<svg aria-hidden="true" width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+        <a class="mcard" href="About.dc.html"><span style="font-size: 15px">About us</span><span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; font-size: 12px; line-height: 1.4; color: #C9D3DD">Our story, leadership and how we work<svg aria-hidden="true" width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+        <a class="mcard" href="Careers.dc.html"><span style="font-size: 15px">Careers</span><span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; font-size: 12px; line-height: 1.4; color: #C9D3DD">Help build the first team<svg aria-hidden="true" width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+        <a class="mcard" href="Contact.dc.html"><span style="font-size: 15px">Contact</span><span style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; font-size: 12px; line-height: 1.4; color: #C9D3DD">Company details and enquiries<svg aria-hidden="true" width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </nav>
+    </sc-if>
+  </div>
+
+  <main style="position: relative; z-index: 1; background: #FFFFFF">
+
+    <!-- CURTAIN GROUP — hero pinned, statement slides over it -->
+    <div style="position: relative; timeline-scope: --curtain">
+
+      <section class="site-hero" style="position: sticky; top: 0; z-index: 0; height: min(100vh, 880px); overflow: hidden; background: #0B2A5E; color: #FFFFFF; display: flex; flex-direction: column">
+        <img class="hero-media" src="assets/hero-silvertide-45s-poster.jpg" alt="" aria-hidden="true">
+        <video id="hero-video" data-image-slot="P01" class="hero-media" src="assets/hero-silvertide-45s.mp4" poster="assets/hero-silvertide-45s-poster.jpg" sc-camel-auto-play="{{heroAutoplay}}" muted="{{true}}" loop="{{true}}" sc-camel-plays-inline="{{true}}" preload="metadata" aria-hidden="true" tabindex="-1" sc-camel-on-playing="{{onHeroPlaying}}" sc-camel-on-pause="{{onHeroPause}}" sc-camel-on-error="{{onHeroError}}" style="opacity: {{heroOpacity}}"></video>
+        <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(7, 25, 58, 0.5)"></div>
+        <div class="dim" aria-hidden="true" style="position: absolute; inset: 0; background: #07193A; opacity: 0"></div>
+
+        <header style="position: relative; box-sizing: border-box; padding: 20px clamp(16px, 2.4vw, 32px); min-height: 84px; display: flex; align-items: center">
+          <a href="Main.dc.html" aria-label="Silvertide home" style="display: inline-flex; align-items: center"><img src="assets/6a5cd94d-90e0-44c4-a1b6-945e74fda0ce.svg" alt="Silvertide — Energy Distribution" style="height: 44px; width: auto; display: block"></a>
+        </header>
+
+        <div class="hero-body" style="position: relative; flex: 1 1 auto; box-sizing: border-box; padding: min(clamp(16px, 3vw, 40px), 2.5vh) clamp(16px, 2.4vw, 32px) min(clamp(24px, 3vw, 32px), 2.5vh); display: flex; flex-direction: column; justify-content: space-between; gap: min(48px, 5vh)">
+          <div class="rise" style="display: flex; flex-direction: column; gap: 12px; max-width: 380px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.32)">
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; letter-spacing: 0.01em; color: #FFFFFF">Silvertide is an energy distribution company. We source crude oil and refined products and deliver them on long-term contracts you can plan a business around.</p>
+            <button type="button" class="hero-video-toggle" aria-controls="hero-video" aria-label="{{heroVideoLabel}}" disabled="{{heroError}}" sc-camel-on-click="{{toggleHeroVideo}}"><svg aria-hidden="true" width="12" height="12" sc-camel-view-box="0 0 24 24" fill="currentColor"><path d="{{heroVideoIcon}}"></path></svg><span>{{heroVideoText}}</span></button>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px 48px">
+            <h1 style="flex: 999 1 560px; min-width: 0; font-size: min(clamp(52px, 8.4vw, 136px), 11.5vh); line-height: 0.9; letter-spacing: -0.03em; font-weight: 300; color: #FFFFFF; text-wrap: balance"><span class="mw"><span style="animation-delay: .35s">Predictable</span></span> <span class="mw"><span style="animation-delay: .45s">energy</span></span> <span class="mw"><span style="animation-delay: .55s">in</span></span> <span class="mw"><span style="animation-delay: .62s">an</span></span> <span class="mw"><span style="animation-delay: .72s">unpredictable</span></span> <span class="mw"><span style="animation-delay: .84s">world.</span></span></h1>
+
+            <!-- Rotating teaser card -->
+            <div class="rise d3 hero-teaser" sc-camel-on-mouse-enter="{{onTeaserEnter}}" sc-camel-on-mouse-leave="{{onTeaserLeave}}" sc-camel-on-focus="{{onTeaserFocus}}" sc-camel-on-blur="{{onTeaserBlur}}" style="flex: 0 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+              <div class="hero-teaser-stage" style="position: relative; height: 196px; border-radius: 8px; overflow: hidden; background: rgba(7, 25, 58, 0.72); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px)">
+                <sc-for list="{{cards}}" as="c" hint-placeholder-count="1">
+                  <a class="hcard" href="{{c.href}}" aria-hidden="{{c.hidden}}" tabindex="{{c.tab}}" style="opacity: {{c.o}}; transform: translateY({{c.y}}px); pointer-events: {{c.pe}}">
+                    <span style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 12px; font-weight: 500; color: #C9D3DD">{{c.n}} — {{c.over}}</span><svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span>
+                    <span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 300">{{c.title}}</span><span style="font-size: 13px; line-height: 1.45; color: #C9D3DD">{{c.body}}</span></span>
+                  </a>
+                </sc-for>
+              </div>
+              <div style="display: flex; gap: 8px" role="group" aria-label="Featured">
+                <sc-for list="{{dots}}" as="d" hint-placeholder-count="4">
+                  <button type="button" class="dotb" aria-label="Show {{d.label}}" aria-pressed="{{d.on}}" sc-camel-on-click="{{d.pick}}"><span><span style="width: {{d.w}}%"></span></span></button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATEMENT + DISCIPLINES — the curtain panel -->
+      <section style="position: relative; z-index: 1; background: #FFFFFF; view-timeline-name: --curtain; padding: clamp(64px, 7vw, 104px) clamp(16px, 2.4vw, 32px); box-sizing: border-box">
+        <div style="max-width: 1376px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px clamp(40px, 6vw, 112px)">
+          <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+            <span class="over">Who we are</span>
+            <p style="margin: 0; font-size: clamp(28px, 2.9vw, 42px); line-height: 1.14; letter-spacing: -0.02em; font-weight: 300; color: #0E1620; text-wrap: pretty">Silvertide is an energy distribution company built for an unpredictable market. One counterparty, from the wellhead to your terminal.</p>
+            <p style="margin: 0; max-width: 520px; font-family: Lora, Georgia, serif; font-size: 17px; line-height: 1.5; letter-spacing: 0.011em; color: #3B4652">We source, we contract, we move. Long-term arrangements with producers, refiners, storage and shipping partners at every stage, so that your volumes, pricing and delivery windows hold when the spot market doesn’t.</p>
+            <a class="ta" href="About.dc.html#story" style="color: #0B2A5E; align-self: flex-start">Our approach <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+          </div>
+          <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+            <span class="over">What we do</span>
+            <div style="display: flex; flex-direction: column; border-bottom: 1px solid #C9D2DB">
+              <a class="row reveal" href="WhatWeDo.dc.html#sourcing">
+                <span style="flex: 0 0 40px; font-size: 12px; color: #5E6B78">01</span>
+                <span class="rt" style="flex: 1 1 220px; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 300; transition: color .2s ease">Global sourcing</span>
+                <span style="flex: 1 1 220px; font-size: 14px; line-height: 1.5; color: #5E6B78">Crude oil and refined products from producers and refiners in established supply regions.</span>
+                <svg class="arw" aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; align-self: center"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+              </a>
+              <a class="row reveal" href="WhatWeDo.dc.html#contracts">
+                <span style="flex: 0 0 40px; font-size: 12px; color: #5E6B78">02</span>
+                <span class="rt" style="flex: 1 1 220px; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 300; transition: color .2s ease">Long-term contracts</span>
+                <span style="flex: 1 1 220px; font-size: 14px; line-height: 1.5; color: #5E6B78">Multi-year supply structured so volumes, pricing and windows hold.</span>
+                <svg class="arw" aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; align-self: center"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+              </a>
+              <a class="row reveal" href="WhatWeDo.dc.html#shipping">
+                <span style="flex: 0 0 40px; font-size: 12px; color: #5E6B78">03</span>
+                <span class="rt" style="flex: 1 1 220px; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 300; transition: color .2s ease">Storage &amp; shipping</span>
+                <span style="flex: 1 1 220px; font-size: 14px; line-height: 1.5; color: #5E6B78">Storage and shipping, under one plan.</span>
+                <svg class="arw" aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; align-self: center"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+              </a>
+              <a class="row reveal" href="WhatWeDo.dc.html#delivery">
+                <span style="flex: 0 0 40px; font-size: 12px; color: #5E6B78">04</span>
+                <span class="rt" style="flex: 1 1 220px; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 300; transition: color .2s ease">Delivery</span>
+                <span style="flex: 1 1 220px; font-size: 14px; line-height: 1.5; color: #5E6B78">Contracted volumes landed at your terminal, in the agreed window.</span>
+                <svg class="arw" aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; align-self: center"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- GLOBAL NETWORK — framed card that grows to full bleed -->
+    <section id="network" class="grow" style="position: relative; background: #07193A; color: #FFFFFF; padding: clamp(64px, 7vw, 104px) clamp(16px, 2.4vw, 32px); box-sizing: border-box">
+      <div style="max-width: 1376px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 80px">
+        <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+          <span class="over" style="color: #9FB0C0">Global network</span>
+          <h2 style="font-size: clamp(40px, 4.4vw, 62px); line-height: 1.04; letter-spacing: -0.025em; color: #FFFFFF; text-wrap: balance">From North America and Europe to Latin America.</h2>
+          <p style="margin: 0; max-width: 480px; font-size: 15px; line-height: 1.5; letter-spacing: 0.01em; color: #C9D3DD">Supply from established producing and refining regions, contracted for the long term and landed where our customers need it — by people who know both ends of the route.</p>
+          <div style="display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255, 255, 255, 0.22); margin-top: 4px">
+            <div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 8px; padding: 20px 20px 0 0"><span style="font-size: 12px; color: #9FB0C0">Origins</span><span style="font-size: clamp(22px, 2vw, 28px); line-height: 1.15; letter-spacing: -0.02em; font-weight: 300; color: #FFFFFF">North America and Europe</span></div>
+            <div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 8px; padding: 20px 20px 0 0"><span style="font-size: 12px; color: #9FB0C0">Destinations</span><span style="font-size: clamp(22px, 2vw, 28px); line-height: 1.15; letter-spacing: -0.02em; font-weight: 300; color: #FFFFFF">Latin America</span></div>
+            <div style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 8px; padding: 20px 20px 0 0"><span style="font-size: 12px; color: #9FB0C0">Basis</span><span style="font-size: clamp(22px, 2vw, 28px); line-height: 1.15; letter-spacing: -0.02em; font-weight: 300; color: #FFFFFF">Long-term contracts</span></div>
+          </div>
+          <a class="ta" href="Contact.dc.html#offices" style="color: #FFFFFF; align-self: flex-start">Company details <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+        </div>
+        <div style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center">
+          <svg sc-camel-view-box="0 0 600 600" role="img" aria-label="Globe showing Silvertide supply routes from North America and Europe to Latin America" style="width: min(100%, 540px); height: auto">
+            <circle cx="300" cy="300" r="292" fill="none" stroke="#9FB0C0" stroke-opacity="0.25" stroke-width="1"></circle>
+            <circle cx="300" cy="300" r="280" fill="#0B2A5E"></circle>
+            <g fill="#9FB0C0">
+              <sc-for list="{{land}}" as="d" hint-placeholder-count="40"><circle cx="{{d.x}}" cy="{{d.y}}" r="{{d.r}}" opacity="{{d.o}}"></circle></sc-for>
+            </g>
+            <g fill="none" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-opacity="0.95">
+              <sc-for list="{{routes}}" as="r" hint-placeholder-count="6"><path class="route" sc-camel-path-length="1" d="{{r.d}}" style="animation-delay: {{r.delay}}"></path></sc-for>
+            </g>
+            <g fill="#FFFFFF">
+              <sc-for list="{{packets}}" as="k" hint-placeholder-count="6"><circle cx="{{k.x}}" cy="{{k.y}}" r="3.4" opacity="{{k.o}}"></circle></sc-for>
+            </g>
+            <g fill="#FFFFFF">
+              <sc-for list="{{hubs}}" as="h" hint-placeholder-count="6"><circle class="pulse" cx="{{h.x}}" cy="{{h.y}}" r="5" fill="{{h.c}}" opacity="{{h.o}}"></circle><circle cx="{{h.x}}" cy="{{h.y}}" r="4.5" fill="{{h.c}}" opacity="{{h.o}}"></circle></sc-for>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK WITH US — pinned; the photo opens from a circle as you scroll -->
+    <section style="position: relative; view-timeline-name: --team; background: #07193A">
+      <div style="position: relative; min-height: 880px; overflow: hidden; color: #FFFFFF">
+        <div class="iris" style="position: absolute; inset: 0; overflow: hidden">
+          <img data-image-slot="P02" class="irisimg" src="assets/team-collaboration.png" alt="Work with us / commercial, credit and risk team — illustrative industry image" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+        </div>
+        <div class="veil" aria-hidden="true" style="position: absolute; inset: 0; background: rgba(7, 25, 58, 0.5)"></div>
+        <div style="position: relative; min-height: 880px; box-sizing: border-box; padding: clamp(64px, 7vw, 104px) clamp(16px, 2.4vw, 32px) clamp(32px, 4vw, 48px); max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+          <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+            <span class="over" style="color: #FFFFFF">Work with us</span>
+            <h2 style="font-size: clamp(40px, 5vw, 76px); line-height: 1; letter-spacing: -0.03em; color: #FFFFFF; text-wrap: balance">Built by people who have sat on both sides of the contract.</h2>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.32)">
+            <p style="margin: 0; max-width: 440px; font-family: Lora, Georgia, serif; font-size: 16px; line-height: 1.5; letter-spacing: 0.011em; color: #FFFFFF">Our people come from trading houses and from credit and risk. Whether you need supply you can plan around, or want to help build the team that delivers it, start here.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px">
+              <a class="po po-l" href="Careers.dc.html" >Explore careers <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+              <a class="ta" href="About.dc.html#leadership" style="color: #FFFFFF">Meet the team <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING PAIR — conduct + contact, dense -->
+    <section class="reveal" style="padding: 16px clamp(16px, 2.4vw, 32px); box-sizing: border-box; background: #FFFFFF">
+      <div style="max-width: 1376px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 16px">
+        <div style="min-height: 480px; box-sizing: border-box; padding: 32px; border-radius: 8px; background: #E9EDF1; display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <span class="over">How we work</span>
+            <h2 style="font-size: clamp(32px, 3vw, 44px); line-height: 1.1; letter-spacing: -0.02em; max-width: 460px; text-wrap: balance">Compliance and conduct, from the first conversation.</h2>
+            <p style="margin: 0; max-width: 420px; font-family: Lora, Georgia, serif; font-size: 15px; line-height: 1.5; letter-spacing: 0.011em; color: #3B4652">How we work, how we behave and how we deal with customers, partners and counterparties is set out plainly, and held to.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 420px">
+              <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 1584px; background: #FFFFFF; font-size: 12px; font-weight: 500; color: #0E1620">Sanctions screening</span>
+              <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 1584px; background: #FFFFFF; font-size: 12px; font-weight: 500; color: #0E1620">Counterparty due diligence</span>
+              <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 1584px; background: #FFFFFF; font-size: 12px; font-weight: 500; color: #0E1620">Anti-bribery &amp; corruption</span>
+              <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 1584px; background: #FFFFFF; font-size: 12px; font-weight: 500; color: #0E1620">HSE standards</span>
+            </div>
+            <a class="ta" href="About.dc.html#conduct" style="color: #0B2A5E">Find out more <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+          </div>
+        </div>
+        <div class="inset-card" style="position: relative; overflow: hidden; min-height: 480px; box-sizing: border-box; padding: 32px; border-radius: 8px; background: #0B2A5E; color: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <span class="over" style="color: #C9D3DD">Contact</span>
+            <h2 style="font-size: clamp(36px, 3.6vw, 56px); line-height: 1; letter-spacing: -0.03em; color: #FFFFFF; max-width: 480px; text-wrap: balance">Supply you can plan around.</h2>
+          </div>
+          <svg aria-hidden="true" sc-camel-view-box="0 0 160 160" width="128" height="128" style="position: absolute; right: 32px; bottom: 32px; opacity: .9"><path d="M0 0 H160 V140 C110 140 50 20 0 20 Z" fill="#FFFFFF"></path><path d="M0 38 C50 38 110 158 160 158 V160 H0 Z" fill="#9FB0C0"></path></svg>
+          <div style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+            <a class="po po-l" href="Contact.dc.html" >Contact us <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+            <span style="font-size: 14px; color: #C9D3DD"><a href="mailto:info@silvertideglobal.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">info@silvertideglobal.com</a></span>
+            <a href="tel:+14167645706" style="font-size: 14px; color: #C9D3DD; text-decoration: underline; text-underline-offset: 3px">+1-416-764-5706</a>
+          </div>
+        </div>
+      </div>
+      <div style="height: 64px"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER — sits beneath the page; the last section lifts off to reveal it -->
+  <footer class="site-footer" style="position: sticky; bottom: 0; z-index: 0; background: #07193A; padding: 56px clamp(16px, 2.4vw, 32px) 0; box-sizing: border-box; color: #9FB0C0; overflow: hidden">
+    <div style="max-width: 1376px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px 40px">
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px">
+          <img src="assets/6a5cd94d-90e0-44c4-a1b6-945e74fda0ce.svg" alt="Silvertide — Energy Distribution" style="height: 48px; width: auto; display: block; align-self: flex-start">
+          <span style="font-size: 13px; line-height: 1.5">Silver Tide Global Inc · Markham, Ontario, Canada</span>
+        </div>
+        <div style="flex: 1 1 520px; max-width: 720px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 24px 32px">
+          <nav aria-label="Footer: what we do" style="display: flex; flex-direction: column">
+            <span style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 8px">What we do</span>
+            <a class="foot" href="WhatWeDo.dc.html#sourcing">Global sourcing</a>
+            <a class="foot" href="WhatWeDo.dc.html#contracts">Long-term contracts</a>
+            <a class="foot" href="WhatWeDo.dc.html#shipping">Storage &amp; shipping</a>
+            <a class="foot" href="WhatWeDo.dc.html#delivery">Delivery</a>
+          </nav>
+          <nav aria-label="Footer: about us" style="display: flex; flex-direction: column">
+            <span style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 8px">About us</span>
+            <a class="foot" href="About.dc.html#story">Our story</a>
+            <a class="foot" href="About.dc.html#leadership">Leadership</a>
+            <a class="foot" href="About.dc.html#conduct">How we work</a>
+            <a class="foot" href="Careers.dc.html">Careers</a>
+          </nav>
+          <nav aria-label="Footer: contact" style="display: flex; flex-direction: column">
+            <span style="font-size: 12px; font-weight: 500; color: #FFFFFF; margin-bottom: 8px">Contact</span>
+            <a class="foot" href="Contact.dc.html">Contact us</a>
+            <a class="foot" href="Contact.dc.html#offices">Company details</a>
+            <a class="foot" href="mailto:info@silvertideglobal.com">Email us</a>
+            <a class="foot" href="tel:+14167645706">+1-416-764-5706</a>
+            <a class="foot" href="#top">Back to top</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-brand-row" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.16)">
+        <div aria-hidden="true" style="overflow: hidden; flex: 1 1 auto; min-width: 0">
+          <div class="wm" style="font-size: clamp(72px, 15vw, 224px); line-height: 0.78; letter-spacing: -0.045em; font-weight: 300; color: #FFFFFF; white-space: nowrap; padding-top: 0.06em">Silvertide</div>
+        </div>
+        <svg class="iso" aria-hidden="true" sc-camel-view-box="0 0 160 160" width="120" height="120" style="display: block; flex: 0 0 auto; margin-bottom: 8px"><path d="M0 0 H160 V140 C110 140 50 20 0 20 Z" fill="#FFFFFF"></path><path d="M0 38 C50 38 110 158 160 158 V160 H0 Z" fill="#9FB0C0"></path></svg>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 16px 0 24px; border-top: 1px solid rgba(255, 255, 255, 0.16); font-size: 12px; line-height: 16px">
+        <span>© 2026 Silver Tide Global Inc. All rights reserved.</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+          <a class="foot" href="Contact.dc.html#offices" style="padding: 0; font-size: 12px">Company details</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2E7BD6&quot;,&quot;options&quot;:[&quot;#2E7BD6&quot;,&quot;#B75928&quot;,&quot;#9FB0C0&quot;]},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:4280}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.motionPreference = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    this.state = { t: 0, teaserT: 0, teaserHover: false, teaserFocus: false, pick: 0, pickT: 0, menu: false, reducedMotion: !!(this.motionPreference && this.motionPreference.matches), heroPlaying: false, heroStarted: false, heroError: false };
+    this.land = this.buildLand();
+  }
+  componentDidMount() {
+    this.heroVideo = document.getElementById('hero-video');
+    if (this.heroVideo) {
+      this.heroVideo.muted = true;
+      this.heroVideo.defaultMuted = true;
+      if (!this.state.reducedMotion) this.playHeroVideo();
+    }
+    if (!this.state.reducedMotion) {
+      this.timer = setInterval(() => this.tick(), 50);
+    }
+    this.onMotionChange = (event) => {
+      this.setState({ reducedMotion: event.matches });
+      if (event.matches) {
+        if (this.heroVideo) this.heroVideo.pause();
+        if (this.timer) clearInterval(this.timer);
+        this.timer = null;
+      } else if (!this.timer) {
+        this.timer = setInterval(() => this.tick(), 50);
+      }
+    };
+    if (this.motionPreference) this.motionPreference.addEventListener('change', this.onMotionChange);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+    if (this.motionPreference) this.motionPreference.removeEventListener('change', this.onMotionChange);
+  }
+  tick() {
+    this.setState({
+      t: this.state.t + 1,
+      teaserT: this.state.teaserT + (this.state.teaserHover || this.state.teaserFocus ? 0 : 1)
+    });
+  }
+  playHeroVideo() {
+    if (!this.heroVideo || this.state.heroError) return;
+    var playback = this.heroVideo.play();
+    if (playback && playback.catch) playback.catch(() => this.setState({ heroPlaying: false }));
+  }
+  toggleHeroVideo() {
+    if (!this.heroVideo) return;
+    if (this.heroVideo.paused) this.playHeroVideo();
+    else this.heroVideo.pause();
+  }
+  polygons() {
+    return [
+      [[-168,66],[-165,60],[-157,57],[-150,60],[-140,59],[-134,57],[-128,52],[-124,48],[-124,42],[-122,37],[-117,32],[-112,27],[-110,23],[-106,22],[-105,20],[-100,17],[-95,16],[-92,14],[-86,12],[-84,9],[-80,8],[-77,8],[-78,9.5],[-82,9],[-83,11],[-83,15],[-86,16],[-88,16],[-88,18],[-87,21],[-90,21],[-91,19],[-94,18],[-97,20],[-97,26],[-97,28],[-94,30],[-90,29],[-88,30],[-84,30],[-83,29],[-82,27],[-81,25],[-80,26],[-81,31],[-79,33],[-76,35],[-76,38],[-74,40],[-70,42],[-70,44],[-66,45],[-64,46],[-61,46],[-65,48],[-67,49],[-60,50],[-56,52],[-60,55],[-62,58],[-64,60],[-70,62],[-78,62],[-80,60],[-80,52],[-90,56],[-95,60],[-92,64],[-96,68],[-110,68],[-130,70],[-141,70],[-156,71],[-165,66]],
+      [[-77,8.5],[-75,10.5],[-72,12],[-70,12],[-66,10.5],[-62,10.5],[-60,8.5],[-55,6],[-52,4.5],[-50,1],[-48,-1],[-44,-2.5],[-40,-3],[-35,-5],[-35,-8],[-38,-13],[-40,-20],[-42,-23],[-46,-24],[-48,-26],[-49,-29],[-52,-33],[-54,-35],[-57,-35],[-58,-38],[-62,-39],[-65,-41],[-65,-45],[-68,-47],[-68,-50],[-69,-52],[-68,-55],[-71,-55],[-75,-52],[-74,-48],[-73,-44],[-73,-40],[-72,-36],[-71,-30],[-70,-24],[-70,-18],[-76,-14],[-77,-12],[-81,-6],[-80,-3],[-80,0],[-78,2],[-77,4],[-78,7]],
+      [[-9,43],[-9,39],[-6,36],[-2,37],[0,39],[3,42],[4,43.5],[8,44],[12,42],[16,39],[16,38],[18,40],[13,45],[19,42],[20,40],[23,37],[24,41],[28,41],[28,44],[30,46],[37,45],[40,47],[48,46],[52,47],[60,55],[60,68],[44,68],[40,66],[30,60],[28,60],[24,59],[21,57],[21,55],[18,54],[14,54],[12,54],[9,54],[8,53],[4,52],[2,51],[0,49],[-2,48],[-5,48],[-2,46],[-1,44],[-2,43]],
+      [[5,58],[6,61],[10,63],[14,67],[20,69],[28,71],[32,70],[36,66],[32,63],[30,60],[28,60],[23,60],[21,61],[22,63],[25,65],[24,66],[21,65],[18,63],[17,61],[18,59],[16,56],[13,55],[12,56],[11,59],[8,58]],
+      [[-5,50],[1,51],[2,53],[0,54],[-1,56],[-2,58],[-4,58.5],[-6,57],[-5,55],[-3,54],[-5,52],[-5,51]],
+      [[-10,52],[-6,52],[-6,54],[-8,55],[-10,54]],
+      [[-24,65],[-14,65],[-14,66.5],[-22,66.5]],
+      [[-45,60],[-43,62],[-40,65],[-32,68],[-22,70],[-20,75],[-22,80],[-35,83],[-55,82],[-70,78],[-58,75],[-55,70],[-52,66],[-50,62]],
+      [[-6,35.8],[-10,30],[-17,21],[-17,15],[-15,11],[-13,8],[-8,5],[-4,5],[1,6],[3,6.5],[8,4.5],[9,2],[9,-1],[12,-5],[13,-9],[12,-15],[14,-22],[15,-28],[18,-33],[20,-35],[26,-34],[32,-29],[35,-24],[40,-15],[40,-10],[39,-5],[41,-1],[43,5],[48,8],[51,11],[44,12],[40,15],[37,19],[35,24],[33,28],[32,31],[30,31.5],[25,32],[20,32],[15,32.5],[10,34],[10,37],[5,36.5],[0,36],[-2,35.5]],
+      [[34,29],[39,20],[43,13],[45,13],[52,17],[56,22],[56,26],[50,30],[48,30],[44,34],[36,36],[34,32]],
+      [[-85,22],[-80,23],[-74,20],[-77,19.8],[-84,21.5]],
+      [[-74,19.5],[-68,18.2],[-69,19.8],[-72,20]]
+    ];
+  }
+  inside(x, y, poly) {
+    var c = false;
+    for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      var xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1];
+      if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) c = !c;
+    }
+    return c;
+  }
+  buildLand() {
+    var polys = this.polygons(), pts = [], step = 3;
+    for (var lat = -58; lat <= 84; lat += step) {
+      var off = (Math.round(lat / step) % 2 === 0) ? 0 : step / 2;
+      for (var lon = -180 + off; lon < 180; lon += step) {
+        for (var p = 0; p < polys.length; p++) {
+          if (this.inside(lon, lat, polys[p])) { pts.push([lat, lon]); break; }
+        }
+      }
+    }
+    return pts;
+  }
+  globe(accent) {
+    var t = this.state.t, R = 280, CX = 300, CY = 300, TILT = 8 * Math.PI / 180;
+    var sway = 14 * Math.sin(t * 0.012);
+    var lon0 = (-55 + sway) * Math.PI / 180;
+    var to3d = function (lat, lon) {
+      var la = lat * Math.PI / 180, lo = lon * Math.PI / 180 - lon0;
+      var x = Math.cos(la) * Math.sin(lo), y = Math.sin(la), z = Math.cos(la) * Math.cos(lo);
+      return [x, y * Math.cos(TILT) - z * Math.sin(TILT), y * Math.sin(TILT) + z * Math.cos(TILT)];
+    };
+    var proj = function (p) { return [CX + p[0] * R, CY - p[1] * R, p[2]]; };
+    var land = [];
+    for (var i = 0; i < this.land.length; i++) {
+      var q = proj(to3d(this.land[i][0], this.land[i][1]));
+      if (q[2] > 0.03) land.push({ x: q[0].toFixed(1), y: q[1].toFixed(1), r: (1.3 + 1.5 * q[2]).toFixed(1), o: (0.28 + 0.66 * q[2]).toFixed(2) });
+    }
+    var hubs = [
+      { id: 'hou', name: 'Houston', lat: 29.8, lon: -95.4, origin: true },
+      { id: 'rtm', name: 'Rotterdam', lat: 51.9, lon: 4.5, origin: true },
+      { id: 'ctg', name: 'Cartagena', lat: 10.4, lon: -75.5 },
+      { id: 'pty', name: 'Panamá', lat: 8.9, lon: -79.5 },
+      { id: 'pcr', name: 'Puerto Cortés', lat: 15.8, lon: -87.9 },
+      { id: 'cll', name: 'Callao', lat: -12.0, lon: -77.1 },
+      { id: 'ssz', name: 'Santos', lat: -23.9, lon: -46.3 },
+      { id: 'bue', name: 'Buenos Aires', lat: -34.6, lon: -58.4 }
+    ];
+    var byId = {}; for (var h = 0; h < hubs.length; h++) byId[hubs[h].id] = hubs[h];
+    var links = [['hou','ctg'],['hou','pcr'],['hou','pty'],['hou','cll'],['hou','ssz'],['rtm','ctg'],['rtm','pcr'],['rtm','pty'],['rtm','ssz'],['rtm','bue']];
+    var unit = function (lat, lon) { var la = lat * Math.PI / 180, lo = lon * Math.PI / 180; return [Math.cos(la) * Math.sin(lo), Math.sin(la), Math.cos(la) * Math.cos(lo)]; };
+    var slerp = function (a, b, s) {
+      var dot = Math.max(-1, Math.min(1, a[0] * b[0] + a[1] * b[1] + a[2] * b[2]));
+      var om = Math.acos(dot); if (om < 1e-6) return a;
+      var s1 = Math.sin((1 - s) * om) / Math.sin(om), s2 = Math.sin(s * om) / Math.sin(om);
+      return [a[0] * s1 + b[0] * s2, a[1] * s1 + b[1] * s2, a[2] * s1 + b[2] * s2];
+    };
+    var routes = [], packets = [];
+    for (var l = 0; l < links.length; l++) {
+      var A = byId[links[l][0]], B = byId[links[l][1]];
+      var ua = unit(A.lat, A.lon), ub = unit(B.lat, B.lon), pts = [], cur = [];
+      for (var k = 0; k <= 48; k++) {
+        var s = k / 48, p = slerp(ua, ub, s);
+        var plat = Math.asin(Math.max(-1, Math.min(1, p[1]))) * 180 / Math.PI, plon = Math.atan2(p[0], p[2]) * 180 / Math.PI;
+        var q2 = to3d(plat, plon), lift = 1 + 0.07 * Math.sin(Math.PI * s);
+        var X = CX + q2[0] * lift * R, Y = CY - q2[1] * lift * R;
+        pts.push([X, Y, q2[2]]);
+        if (q2[2] > -0.02) { cur.push(X.toFixed(1) + ' ' + Y.toFixed(1)); }
+        else { if (cur.length > 1) routes.push({ d: 'M' + cur.join(' L'), delay: (l * 0.5).toFixed(1) + 's' }); cur = []; }
+      }
+      if (cur.length > 1) routes.push({ d: 'M' + cur.join(' L'), delay: (l * 0.5).toFixed(1) + 's' });
+      var ph = ((t * 0.0045) + l * 0.173) % 1, idx = Math.round(ph * 48), pk = pts[idx];
+      if (pk[2] > 0.0) packets.push({ x: pk[0].toFixed(1), y: pk[1].toFixed(1), o: Math.min(1, 0.4 + pk[2]).toFixed(2) });
+      var idx2 = Math.max(0, idx - 2), pk2 = pts[idx2];
+      if (pk2[2] > 0.0) packets.push({ x: pk2[0].toFixed(1), y: pk2[1].toFixed(1), o: (0.35 * Math.min(1, 0.4 + pk2[2])).toFixed(2) });
+    }
+    var out = [];
+    for (var n = 0; n < hubs.length; n++) {
+      var hp = proj(to3d(hubs[n].lat, hubs[n].lon));
+      if (hp[2] > 0.08) out.push({ x: hp[0].toFixed(1), y: hp[1].toFixed(1), lx: (hp[0] + 9).toFixed(1), ly: (hp[1] + 4).toFixed(1), name: hubs[n].name, c: hubs[n].origin ? '#FFFFFF' : accent, o: Math.min(1, hp[2] * 2.5).toFixed(2) });
+    }
+    return { land: land, routes: routes, packets: packets, hubs: out };
+  }
+  teaser() {
+    var items = [
+      { n: '01', over: 'What we do', title: 'From the wellhead to your terminal.', body: 'Sourcing, contracts, storage, shipping and delivery. One counterparty for the whole chain.', href: 'WhatWeDo.dc.html' },
+      { n: '02', over: 'Global network', title: 'North America and Europe to Latin America.', body: 'Supply from established producing and refining regions, landed where our customers need it.', href: '#network' },
+      { n: '03', over: 'How we work', title: 'Compliance and conduct, from day one.', body: 'Sanctions screening, counterparty due diligence, anti-bribery and HSE standards on every arrangement.', href: 'About.dc.html#conduct' },
+      { n: '04', over: 'Careers', title: 'Help build the predictable partner.', body: 'A small first team, drawn from trading houses and from credit and risk.', href: 'Careers.dc.html' }
+    ];
+    var PER = 120, t = this.state.teaserT, since = t - this.state.pickT;
+    var active = (this.state.pick + Math.floor(since / PER)) % items.length;
+    var self = this;
+    var cards = items.map(function (it, i) {
+      var on = i === active;
+      return Object.assign({}, it, { o: on ? 1 : 0, y: on ? 0 : 14, pe: on ? 'auto' : 'none', hidden: on ? 'false' : 'true', tab: on ? 0 : -1 });
+    });
+    var dots = items.map(function (it, i) {
+      return { label: it.over, on: i === active ? 'true' : 'false', w: i === active ? 100 : 0, pick: function () { self.setState({ pick: i, pickT: self.state.teaserT }); } };
+    });
+    return { cards: cards, dots: dots };
+  }
+  renderVals() {
+    var accent = this.props.accent ?? '#2E7BD6';
+    var g = this.globe(accent);
+    var tz = this.teaser();
+    var open = !!this.state.menu;
+    return {
+      accent: accent, land: g.land, routes: g.routes, packets: g.packets, hubs: g.hubs,
+      cards: tz.cards, dots: tz.dots,
+      onTeaserEnter: () => this.setState({ teaserHover: true }),
+      onTeaserLeave: () => this.setState({ teaserHover: false }),
+      onTeaserFocus: () => this.setState({ teaserFocus: true }),
+      onTeaserBlur: (event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) this.setState({ teaserFocus: false });
+      },
+      heroAutoplay: !this.state.reducedMotion,
+      heroOpacity: this.state.heroStarted && !this.state.heroError ? 1 : 0,
+      heroError: this.state.heroError,
+      heroVideoLabel: this.state.heroPlaying ? 'Pause background video' : 'Play background video',
+      heroVideoText: this.state.heroPlaying ? 'Pause film' : 'Play film',
+      heroVideoIcon: this.state.heroPlaying ? 'M6 4h4v16H6zM14 4h4v16h-4z' : 'M7 3l15 9-15 9z',
+      toggleHeroVideo: () => this.toggleHeroVideo(),
+      onHeroPlaying: () => this.setState({ heroPlaying: true, heroStarted: true }),
+      onHeroPause: () => this.setState({ heroPlaying: false }),
+      onHeroError: () => this.setState({ heroPlaying: false, heroError: true }),
+      menuOpen: open, menuLabel: open ? 'Close' : 'Menu',
+      menuIcon: open ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      toggleMenu: () => this.setState({ menu: !this.state.menu })
+    };
+  }
+}
+</script>
+
+
+</body></html>

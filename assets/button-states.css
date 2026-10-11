@@ -1,0 +1,47 @@
+/* Shared control states. Button text and icons change color together. */
+.po.po-l { color: #FFFFFF; border-color: #FFFFFF; background: transparent; }
+.po.po-d { color: #0B2A5E; border-color: #0B2A5E; background: transparent; }
+.po.po-l:is(:hover, :focus-visible, :active) {
+  color: #0B2A5E; background: #FFFFFF; border-color: #FFFFFF;
+}
+.po.po-d:is(:hover, :focus-visible, :active) {
+  color: #FFFFFF; background: #0B2A5E; border-color: #0B2A5E;
+}
+.po.pf { color: #FFFFFF; background: #07193A; border-color: #07193A; }
+.po.pf:is(:hover, :focus-visible, :active) {
+  color: #FFFFFF; background: #0B2A5E; border-color: #0B2A5E;
+}
+.pill.pill-d { color: #FFFFFF; background: #07193A; }
+.pill.pill-d:is(:hover, :focus-visible, :active) { color: #FFFFFF; background: #0B2A5E; }
+.pill.pill-w { color: #07193A; background: #FFFFFF; }
+.pill.pill-w:is(:hover, :focus-visible, :active) { color: #07193A; background: #E9EDF1; }
+
+button.fp:is(:hover, :focus-visible, :active) {
+  color: #0B2A5E; background: #E9EDF1; border-color: #0B2A5E;
+}
+button.fp[aria-pressed="true"],
+button.fp[aria-pressed="true"]:is(:hover, :focus-visible, :active) {
+  color: #FFFFFF; background: #07193A; border-color: #07193A;
+}
+a.tag:is(:hover, :focus-visible, :active) { color: #0B2A5E; background: #E9EDF1; }
+a.tag:is(:hover, :focus-visible, :active) > span { color: inherit !important; }
+a.mcard:is(:hover, :focus-visible, :active) { color: #FFFFFF; background: #163565; }
+a.hcard:is(:hover, :focus-visible, :active) { color: #FFFFFF; }
+a.foot:is(:hover, :focus-visible, :active) { color: #FFFFFF; }
+a.cl:is(:hover, :focus-visible, :active) { color: #07193A; }
+a.jl:is(:hover, :focus-visible, :active) { color: #FFFFFF; }
+a.row:is(:hover, :focus-visible, :active) { color: #0E1620; }
+a.row:is(:hover, :focus-visible, :active) .rt { color: #0B2A5E; }
+a.ta:is(:hover, :focus-visible), a.cl:is(:hover, :focus-visible),
+a.foot:is(:hover, :focus-visible) { text-decoration: underline; text-underline-offset: 4px; }
+
+button.hero-video-toggle { color: #FFFFFF; background: #07193A; border-color: #FFFFFF; }
+button.hero-video-toggle:is(:hover, :focus-visible, :active) { color: #FFFFFF; background: #0B2A5E; }
+button.dotb:is(:hover, :focus-visible) > span { background: #9FB0C0; }
+
+/* The white and navy rings remain visible on both light and dark sections. */
+body :is(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #07193A;
+}

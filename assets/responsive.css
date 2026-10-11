@@ -1,0 +1,79 @@
+/* Shared navigation, language controls and responsive layout. */
+.site-nav .language-switch { position: relative; display: inline-flex; align-items: center; flex: 0 0 88px; width: 88px; height: 44px; box-sizing: border-box; padding: 0; border: 0; border-radius: 1584px; background: #07193A; text-align: center; }
+.site-nav .language-switch a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; box-sizing: border-box; color: #9FB0C0; background: transparent; font-family: inherit; font-size: 14px; font-weight: 500; line-height: 1; letter-spacing: 0; text-transform: none; border-radius: 1584px; text-decoration: none; transition: background .2s ease, color .2s ease; animation: none; }
+.site-nav .language-switch a[aria-current="page"] { color: #FFFFFF; font-weight: 700; }
+.site-nav .language-divider { position: absolute; left: 50%; top: 16px; height: 12px; width: 1px; background: rgba(159,176,192,.4); pointer-events: none; }
+.site-nav .language-switch a:is(:hover,:focus-visible) { background: #0B2A5E; color: #FFFFFF; }
+.site-nav .language-switch a:focus-visible { outline: 2px solid #FFFFFF; outline-offset: -3px; }
+.site-nav .nav-contact { width: 112px; justify-content: center; box-sizing: border-box; }
+.site-nav .pill-d { width: 122px; justify-content: center; box-sizing: border-box; }
+#sitemenu { max-height: calc(100svh - 88px); overflow-y: auto; overscroll-behavior: contain; }
+.site-hero h1 { overflow-wrap: break-word; }
+.site-hero .hero-teaser-stage { display: grid; height: auto !important; min-height: 220px; }
+.hero-teaser-stage a.hcard { position: relative; inset: auto; grid-area: 1 / 1; min-height: 220px; }
+.site-footer .footer-brand-row { display: grid !important; grid-template-columns: minmax(0,1fr) clamp(44px,9vw,120px); align-items: center !important; gap: clamp(12px,2vw,24px) !important; }
+.site-footer .wm { font-size: clamp(40px,12.7vw,190px) !important; line-height: 1.08 !important; padding: .08em 0 !important; }
+.site-footer .iso { width: 100% !important; height: auto !important; margin-bottom: 0 !important; }
+.po, .ta, .cl, .tag { box-sizing: border-box; max-width: 100%; min-width: 0; }
+.po svg, .ta svg, .cl svg, .tag svg { flex-shrink: 0; }
+body .po { white-space: normal; padding-top: 10px; padding-bottom: 10px; }
+.site-footer a.foot { min-height: 44px; box-sizing: border-box; display: flex; align-items: center; }
+button.dotb { height: 44px; min-width: 44px; }
+button.dotb>span { top: 21px; }
+button.fp, a.tag { min-height: 44px; }
+section[id], article[id], div[id] { scroll-margin-top: 88px; }
+.site-hero header { flex-shrink: 0; }
+body .chain { scrollbar-width: thin; scrollbar-color: #9FB0C0 #07193A; }
+body .chain::-webkit-scrollbar { display: block; height: 6px; }
+body .chain::-webkit-scrollbar-thumb { background: #9FB0C0; border-radius: 4px; }
+
+/* A content-sized hero prevents cut-off copy at narrow or short viewports. */
+@media (max-width: 1100px), (max-height: 600px) {
+  .site-hero { position: relative !important; height: auto !important; min-height: 100svh; }
+  .site-hero .hero-body { flex: 1 0 auto !important; gap: 36px !important; padding-top: 20px !important; padding-bottom: 28px !important; }
+  .site-hero .dim { display: none; }
+  .site-hero .hero-teaser { flex-basis: 100% !important; width: 100%; max-width: 480px; }
+  .site-footer { position: relative !important; }
+  .site-footer .wm, .site-footer .iso { animation: none !important; transform: none !important; opacity: 1 !important; }
+  body .chain { flex-direction: column; align-items: stretch; overflow: visible; gap: 0; }
+  .chain .node { width: 100%; }
+  .chain .beam { flex: 0 0 28px; width: 1px; min-width: 1px; height: 28px; min-height: 28px; align-self: center; animation: none; }
+  .chain .beam>span, .chain .beam>svg { display: none; }
+}
+@media (max-width: 600px) {
+  .site-nav { top: 12px !important; right: 16px !important; }
+  .site-nav .nav-contact { display: none; }
+  .site-nav .pill-d { width: 88px; padding: 0 12px; gap: 8px; }
+  .site-nav .pill-d>svg:first-child { display: none; }
+  .site-hero header { min-height: 76px !important; padding: 16px !important; }
+  .site-hero header img { height: 32px !important; max-width: 112px; }
+  .site-hero .hero-body { gap: 32px !important; padding: 16px 16px 28px !important; }
+  .site-hero h1 { font-size: clamp(36px,10vw,56px) !important; line-height: 1.04 !important; flex-basis: 100% !important; }
+  .site-hero .mw, .site-hero .mw>span { display: inline; overflow: visible; padding: 0; margin: 0; animation: none; }
+  .site-hero .hcard { padding: 20px; gap: 16px; }
+  .site-hero .hcard>span:last-child>span:first-child { font-size: 22px !important; }
+  #top main h2 { font-size: clamp(30px,8.5vw,42px) !important; line-height: 1.12 !important; overflow-wrap: break-word; }
+  #top main h3 { overflow-wrap: break-word; }
+  #top .in { font-size: 16px; }
+  #top .in, #top .fld, #top form, #top main section>div { min-width: 0; }
+  .inset-card { padding: 24px !important; min-height: 0 !important; }
+  .inset-card>svg[aria-hidden="true"] { opacity: .18 !important; }
+  .careers-closing-copy { padding-right: 0 !important; }
+  .careers-closing-mark { display: none; }
+  .site-footer { padding-top: 40px !important; }
+  .site-footer .footer-brand-row { gap: 12px !important; grid-template-columns: minmax(0,1fr) 44px; }
+  .site-footer .wm { font-size: clamp(40px,13.5vw,78px) !important; }
+  .site-footer nav { min-width: 0; }
+  .site-footer a { overflow-wrap: anywhere; }
+  .chain { flex-direction: column; align-items: stretch; overflow: visible; gap: 0; }
+  .chain .node { width: 100%; }
+  .chain .beam { flex: 0 0 28px; width: 1px; min-width: 1px; height: 28px; min-height: 28px; align-self: center; animation: none; }
+  .chain .beam>span, .chain .beam>svg { display: none; }
+  .reveal, .row::before, .grow, .iris, .veil, .irisimg { animation: none !important; }
+  .iris { clip-path: none !important; }
+  .veil { opacity: 1 !important; }
+  .markwrap { opacity: .12 !important; }
+}
+@media (max-width: 360px) {
+  .site-hero header img { height: 28px !important; }
+}

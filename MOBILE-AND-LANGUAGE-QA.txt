@@ -1,0 +1,47 @@
+SILVERTIDE — RESPONSIVE AND BILINGUAL CHECKS
+11 October 2026
+
+CHANGES
+Removed the press and media enquiry section and its links.
+Resolved conflicting inline button colors. Light and dark buttons now switch text and background together for hover, keyboard focus and active states. Explicit control color pairs pass AA contrast checks.
+Added English / Spanish versions of all five pages with corresponding-page language links.
+Made heroes fit their content at phone, tablet and short-window sizes; removed the mobile fixed-height clipping.
+Made rotating homepage cards size to the longest translated content.
+Resized the footer wordmark alongside the logo; removed the mobile reveal animation that could conceal it.
+Kept compact navigation scrollable in short windows, added Escape dismissal, and restored section anchors after the exported component mounts.
+Increased key mobile control heights, set form fields to 16px text, reduced inset-card padding and removed decorative collisions.
+Stacked supply-chain stages on small screens; retained a visible scrollbar for the horizontal layout on wider screens.
+
+RESPONSIVE BROWSER CHECKS
+All five pages in both languages were checked at:
+320 x 740 — narrow phone
+390 x 844 — phone
+844 x 390 — landscape phone
+1024 x 768 — tablet
+1440 x 900 — desktop
+50 page/size combinations passed: no horizontal document overflow, no hero body extending beyond its container, no clipped footer wordmark and no internal overflow in the homepage cards.
+
+INTERACTION CHECKS
+EN / ES follow-up: the control has identical 88 x 44px dimensions in both languages, the site's Red Hat Display font, a subtle divider and a brighter selected-language label. Contact/menu buttons have fixed widths so switching languages or opening the menu does not shift the selector.
+Chrome-specific issue reproduced: the Spanish URL was being automatically translated into English by Chrome (translated-ltr document class and injected translation nodes). Page-level translate="no", notranslate class and Google notranslate metadata now protect both authored languages. The same Chrome tab was retested successfully without changing its browser preferences.
+Actual Chrome testing covered EN-to-ES-to-EN on all five pages, opening both menus on every page, and following all four menu destinations in each language at 390px width. Spanish remained Spanish, English remained English, and each menu destination stayed in its selected language. At 320px, both homepage variants have no horizontal or footer overflow and an 8px gap between the logo and selector.
+All five Spanish desktop pages were reviewed from header through footer, including rotating homepage cards, menu copy, careers areas and form options. Embedded logo descriptors now read DISTRIBUCIÓN DE ENERGÍA. The email placeholder, map label Róterdam and country spelling Canadá were corrected.
+Mobile Spanish menu opens and closes; Escape dismisses it.
+Careers filtering displays the selected area correctly and uses 44px-high controls.
+Contact fields fit the phone width and use 16px text.
+EN / ES links retain the page and current section; a contact-form language change restored the correct section below the fixed navigation.
+Specific footer and homepage section links now reach their named services, company story, leadership, conduct, or careers-interest section in the selected language.
+Homepage carousel rotation pauses while hovered or while keyboard focus is inside its cards or controls. Isolated checks cover pause, resumption, focus movement and manual card selection in both languages.
+Hero indicator follow-up: only the current card's line is fully white; the other three are muted. Removed cumulative progress filling, which made earlier cards look selected and left a newly selected paused card's line empty. All four manual selections were checked in Chrome's mobile layout in both languages; visible card, selected control and white line matched immediately.
+Final mobile regression: all five pages in both languages passed at 320 x 740 and 390 x 844 (20 combinations). Checked actual EN-to-ES clicks, Chrome translation protection, single language selector, header spacing, menu open/Escape-close, menu destinations, hero containment, document overflow, footer wordmark, rotating-card content, mobile field sizing and loaded images. No failures found.
+Light and dark button focus states were checked against the shared hover/focus rules.
+
+STATIC AND FUNCTIONAL CHECKS
+Both homepage/index pairs match.
+12 page files, including index aliases, passed local-link, anchor, language metadata, company-detail and component-script checks.
+No active press/media enquiry links or leftover English catalog text were found in the Spanish UI, apart from preserved brand and postal identifiers.
+English and Spanish contact handlers passed isolated Unicode, newline, optional-field and required-field checks. No email was sent.
+The final ZIP was checked for corruption and excludes archived concepts.
+
+SCOPE OF VERIFICATION
+These are responsive browser previews and local functional checks, not physical iPhone/Android or Safari device certification. A final check on the actual hosted URL remains appropriate after deployment. The contact flow still requires the visitor's email application; this update does not add a form-delivery backend.

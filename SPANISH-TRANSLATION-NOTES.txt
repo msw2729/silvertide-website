@@ -1,0 +1,44 @@
+SILVERTIDE — ENGLISH / SPANISH EDITION
+Reviewed 11 October 2026
+
+All five current pages have a Spanish counterpart. The EN / ES switch stays on the corresponding page and preserves the current section. Menus, image descriptions, accessibility labels, careers filters, form labels, product choices, email subjects, draft-email content and video controls are localized.
+
+The language is professional Latin American Spanish, with consistent direct address. The company name, street address, city, province, postal code, phone number, email and Silvertide brand identity are preserved. The country label is localized as Canadá, including address and footer location lines.
+The Spanish header and footer use a localized logo with the tagline DISTRIBUCIÓN DE ENERGÍA. The brand name and wave mark remain unchanged. The language selector keeps the literal labels EN / ES and opts out of automatic translation. The example email placeholder is nombre@empresa.com, and the globe uses the Spanish place name Róterdam.
+
+KEY INDUSTRY TERMS
+Crude oil — petróleo crudo
+Refined products — productos refinados
+Supply — suministro
+Sourcing — abastecimiento
+Trading — comercialización de hidrocarburos (shortened where the context is clear)
+Counterparty — contraparte
+Cargo — cargamento
+Long-term contracts — contratos a largo plazo
+Multi-year supply — suministro plurianual
+Delivery window — ventana de entrega
+Storage / tankage — almacenamiento / capacidad de almacenamiento en tanques
+Shipping — transporte marítimo
+Vessel chartering — fletamento de buques
+Spot and time chartering — fletamento en el mercado spot y por tiempo
+Freight — fletes
+Laytime — tiempo de plancha
+Demurrage — sobrestadías
+Discharge — descarga
+Due diligence — debida diligencia
+HSE — salud, seguridad y medio ambiente
+Industry terms remain contextual. Mercado spot is retained for the spot-market basis; it is not automatically replaced by fletamento por viaje, which describes a charter form. Pozo is used in the concise origin-to-terminal headline, while plazos and ventanas de entrega follow their commercial context.
+
+MEANING CHECKS
+The homepage promise is “Energía confiable en un mundo impredecible.” The Spanish preserves the intended reliability message without turning it into a fixed-price promise. Contract pricing can still be fixed, formula-based or hybrid, as specified in the English services page.
+The Careers page explicitly welcomes expressions of interest and says the listed areas are not open vacancies. The Contact form explicitly prepares a draft for review and sending in the visitor’s own email application.
+The translation was checked in two passes for terminology and meaning. Alternatives that could imply formal guarantees or replace a spot-market basis with a voyage-contract form were corrected.
+
+TERMINOLOGY REFERENCES
+Primary sources were used for terminology, not as evidence of Silvertide's own capabilities:
+Repsol, Trading — https://www.repsol.com/es/productos-y-servicios/trading/index.cshtml
+ENAP, financial-results material using sobrestadía de buques — https://www.enap.cl/files/get/2391
+Chile Servicio de Impuestos Internos, fletamento por tiempo / por viaje terminology — https://www.sii.cl/pagina/jurisprudencia/adminis/2001/ventas/ja204.htm
+BOE, maritime terminology including tiempo de plancha — https://www.boe.es/buscar/act.php?id=BOE-A-2014-7877&lang=es&p=&tn=1
+
+Historical legal/tax texts above are vocabulary references only. They were not used to add legal or compliance claims to the site.
