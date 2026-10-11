@@ -2,7 +2,7 @@
 
 Static bilingual site using the bundled DCLogic/React runtime. Serve this directory with a static web server; no build or external form SDK is required.
 
-Analytics preparation is disabled pending the confirmed GA4 ID, consent choices and privacy notices. See [ANALYTICS-SETUP.txt](ANALYTICS-SETUP.txt) for the release gates and event contract. Run `node tests/analytics.cjs` for isolated tests with all Google and Formspree requests mocked.
+Analytics preparation contains confirmed measurement ID `G-MP521GB8WR` and remains disabled pending approved bilingual privacy/consent notices and the company's inquiry retention rule. See [ANALYTICS-SETUP.txt](ANALYTICS-SETUP.txt) for verified account settings, release gates and the event contract. Run `node tests/analytics.cjs` for isolated tests with all Google and Formspree requests mocked.
 
 ## Contact forms
 

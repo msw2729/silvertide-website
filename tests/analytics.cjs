@@ -1,8 +1,10 @@
-// All Google and Formspree requests are intercepted. The ID below is a test fixture only.
+// All Google and Formspree requests are intercepted, including the confirmed production ID.
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const root=path.resolve(__dirname,'..');
+const confirmedId='G-MP521GB8WR';
+assert.match(fs.readFileSync(path.join(root,'assets/analytics-config.js'),'utf8'), /measurementId: 'G-MP521GB8WR'/);
 const server=http.createServer((req,res)=>{
  let file=path.resolve(root,'.'+new URL(req.url,'http://localhost').pathname);
  if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(403).end();return;}
@@ -22,14 +24,14 @@ const server=http.createServer((req,res)=>{
    page.on('pageerror',e=>errors.push(e.message));
    await context.route('**/*',async r=>{
     const url=r.request().url();
-    if(url===base+'/assets/analytics-config.js'&&enabled)return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-TEST00000",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
+    if(url===base+'/assets/analytics-config.js'&&enabled)return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-MP521GB8WR",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
     if(url.startsWith(base+'/'))return r.continue();
     if(url.startsWith('https://www.googletagmanager.com/gtag/js')){google++;return r.fulfill({contentType:'text/javascript',body:'/* mock Google tag; deliberately no network or cookies */'});}
     if(url==='https://formspree.io/f/xppqljkw'){posts++;return r.fulfill({status,contentType:'application/json',body:JSON.stringify({ok:status===200})});}
     return r.abort();
    });
    const route=locale==='en'?'/contact/':'/es/contacto/';
-   const visit=async()=>{await page.goto('about:blank');await page.goto(base+route+'?email=PRIVATE_QUERY#PRIVATE_FRAGMENT');await page.waitForSelector('body > div form');};
+   const visit=async()=>{await page.goto('about:blank');await page.goto(base+route+'?email=PRIVATE_QUERY#PRIVATE_FRAGMENT',{referer:'https://example.org/PRIVATE_REFERRER?email=PRIVATE_EMAIL'});await page.waitForSelector('body > div form');};
    const events=()=>page.evaluate(()=>Array.from(window.dataLayer||[],a=>Array.from(a)).filter(a=>a[0]==='event'));
    await visit();assert.equal(google,0);assert.equal(await page.locator('#analytics-consent').count(),0);
    enabled=true;await visit();
@@ -54,9 +56,14 @@ const server=http.createServer((req,res)=>{
    await page.locator('#analytics-settings').click();await panel.locator('button').first().click();
    assert.equal((await events()).filter(x=>x[1]==='page_view').length,1);
    const commands=await page.evaluate(()=>Array.from(window.dataLayer,a=>Array.from(a)));
+   assert.equal(commands.filter(a=>a[0]==='config').length,1);
+   assert.equal(commands.find(a=>a[0]==='config')[1],confirmedId);
+   assert.equal(await page.locator('script[src="https://www.googletagmanager.com/gtag/js?id='+confirmedId+'"]').count(),1);
+   assert.ok(commands.filter(a=>a[0]==='event').every(a=>a[2].send_to===confirmedId));
    const cfg=commands.find(a=>a[0]==='config')[2];
    assert.equal(cfg.send_page_view,false);assert.equal(cfg.allow_google_signals,false);assert.equal(cfg.allow_ad_personalization_signals,false);
    assert.equal(cfg.page_location,base+route);
+   assert.equal(cfg.page_referrer,'https://example.org/');
    assert.equal(commands.find(a=>a[0]==='consent'&&a[1]==='update')[2].ad_user_data,'denied');
    await page.locator('form button[type=button]').click();
    await page.locator('form [type=submit]').click();
@@ -109,7 +116,7 @@ const server=http.createServer((req,res)=>{
   await context.addInitScript(()=>localStorage.setItem('silvertide-analytics-consent-v1',JSON.stringify({choice:'granted',expires:Date.now()+60000})));
   await context.route('**/*',r=>{
    const u=r.request().url();
-   if(u===base+'/assets/analytics-config.js')return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-TEST00000",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
+   if(u===base+'/assets/analytics-config.js')return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-MP521GB8WR",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
    if(u.startsWith(base+'/'))return r.continue();
    if(u.startsWith('https://www.googletagmanager.com/gtag/js'))return r.fulfill({contentType:'text/javascript',body:'/* mock */'});
    return r.abort();
@@ -119,6 +126,8 @@ const server=http.createServer((req,res)=>{
    await page.goto(base+route.route);
    await page.waitForFunction(()=>!!window.dataLayer);
    const data=await page.evaluate(()=>Array.from(window.dataLayer,a=>Array.from(a)));
+   assert.equal(data.filter(a=>a[0]==='config').length,1);
+   assert.equal(data.find(a=>a[0]==='config')[1],confirmedId);
    assert.equal(data.filter(a=>a[0]==='event'&&a[1]==='page_view').length,1);
    assert.equal(data.find(a=>a[0]==='config')[2].page_location,base+route.route);
    assert.equal(data.find(a=>a[0]==='config')[2].site_language,route.locale);

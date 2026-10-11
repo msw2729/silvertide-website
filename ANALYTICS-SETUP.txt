@@ -1,11 +1,20 @@
 GA4 LOCAL DRAFT — NOT ENABLED OR PUBLISHED
 
-Base: c96201ea5d391681815cae9873342f060b91f8fd (hero optimization and clean bilingual routes).
+Integrated main: 45f343366bc3c29d76916ba3bca939891d21dcf9 (hero layout, clean routes and SEO fixes preserved).
 No existing analytics tag, consent banner or privacy notice was found.
 
+VERIFIED ACCOUNT SETTINGS - 2026-10-11
+Account Silver Tide Global 411584550; property Silver Tide Website 558442369.
+Web stream 16108261267, https://www.silvertideglobal.com, measurement ID G-MP521GB8WR.
+User completed the disclosed terms acceptance. Canada/Toronto, USD, 1-10 employees.
+Enhanced Measurement, Google signals and user-provided data collection are off.
+Ads personalization was disabled in all 307 regions and the saved 0/307 state was verified.
+Retention read without changes: event data 2 months; user data 14 months; reset on new activity on. These controls do not affect most aggregated standard reports.
+No actual GA events or inquiry submissions were sent during local mocked validation.
+
 RELEASE GATES
-1. Obtain the confirmed GA4 measurement ID from the account/property worker. No production ID is assumed.
-2. Approve the bilingual consent text and 180-day choice/cookie duration, and provide published English/Spanish privacy notice URLs. The draft deliberately does not invent a full privacy policy or legal promises.
+1. Confirmed ID G-MP521GB8WR is recorded in the disabled configuration.
+2. Approve the bilingual notice/consent text and 180-day choice/cookie duration, and specify the actual Formspree/email inquiry retention/deletion rule. Publish the approved notices and fill their English/Spanish URLs. Do not invent retention promises or present the GA retention controls as the inquiry retention policy.
 3. In the web stream, disable Enhanced Measurement (including form interactions, outbound clicks, site search and history-based page changes) to prevent duplicate or unintended events. Disable Google signals, user-provided data and advertising personalization. Do not link Ads or enable advertising features.
 4. Mark generate_lead as a key event. Register event-scoped custom dimensions only as needed: site_language, page_id, destination_page, destination_language, navigation_type, link_domain, form_id.
 5. Fill assets/analytics-config.js with the confirmed ID and approved notice URLs, then enable only after review. Empty ID, disabled config or missing notice means no UI, no Google requests and no tracking.
