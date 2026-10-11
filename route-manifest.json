@@ -1,75 +1,75 @@
 {
-  "origin": "https://silvertideglobal.com",
+  "origin": "https://www.silvertideglobal.com",
   "routes": [
     {
       "source": "Main.dc.html",
       "route": "/",
       "locale": "en",
       "file": "index.html",
-      "bytes": 58694
+      "bytes": 62827
     },
     {
       "source": "Main.es.dc.html",
       "route": "/es/",
       "locale": "es",
       "file": "es/index.html",
-      "bytes": 60067
+      "bytes": 64443
     },
     {
       "source": "WhatWeDo.dc.html",
       "route": "/what-we-do/",
       "locale": "en",
       "file": "what-we-do/index.html",
-      "bytes": 47154
+      "bytes": 47799
     },
     {
       "source": "WhatWeDo.es.dc.html",
       "route": "/es/que-hacemos/",
       "locale": "es",
       "file": "es/que-hacemos/index.html",
-      "bytes": 48439
+      "bytes": 49084
     },
     {
       "source": "About.dc.html",
       "route": "/about/",
       "locale": "en",
       "file": "about/index.html",
-      "bytes": 42326
+      "bytes": 42939
     },
     {
       "source": "About.es.dc.html",
       "route": "/es/quienes-somos/",
       "locale": "es",
       "file": "es/quienes-somos/index.html",
-      "bytes": 43493
+      "bytes": 44106
     },
     {
       "source": "Careers.dc.html",
       "route": "/careers/",
       "locale": "en",
       "file": "careers/index.html",
-      "bytes": 42735
+      "bytes": 43382
     },
     {
       "source": "Careers.es.dc.html",
       "route": "/es/trabaja-con-nosotros/",
       "locale": "es",
       "file": "es/trabaja-con-nosotros/index.html",
-      "bytes": 43803
+      "bytes": 44450
     },
     {
       "source": "Contact.dc.html",
       "route": "/contact/",
       "locale": "en",
       "file": "contact/index.html",
-      "bytes": 42533
+      "bytes": 43206
     },
     {
       "source": "Contact.es.dc.html",
       "route": "/es/contacto/",
       "locale": "es",
       "file": "es/contacto/index.html",
-      "bytes": 43321
+      "bytes": 43994
     }
   ],
   "legacy": {
@@ -140,9 +140,9 @@
         "assets/button-states.css"
       ]
     },
-    "/assets/responsive.01da4bc000c3.css": {
-      "sha256": "01da4bc000c3d0fb6127b46310e648824ae764ba5fbdf8499c93dcd25a795130",
-      "bytes": 6099,
+    "/assets/responsive.8f8b322cacf4.css": {
+      "sha256": "8f8b322cacf41e1257b9b4bad608c46d13a3b738909a45f2f4d4c319dedbe8ad",
+      "bytes": 6296,
       "sources": [
         "assets/responsive.css"
       ]
@@ -396,7 +396,7 @@
     "assets/hero-silvertide-first-frame-desktop.webp": "/assets/hero-silvertide-first-frame-desktop.0020aa83681e.webp",
     "assets/a16aa21a-1155-4dfa-9215-2c8d3467b518.js": "/assets/dc-runtime.654b7f6201e7.js",
     "assets/button-states.css": "/assets/button-states.b2f3a96f4245.css",
-    "assets/responsive.css": "/assets/responsive.01da4bc000c3.css",
+    "assets/responsive.css": "/assets/responsive.8f8b322cacf4.css",
     "assets/site-navigation.js": "/assets/site-navigation.0ca810fb5122.js",
     "assets/4f3bcd72-c1c8-436d-87a5-dcb9bd90833a.woff2": "/assets/font.ac079950fd98.woff2",
     "assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2": "/assets/font.500d3bfa4e42.woff2",
@@ -466,7 +466,7 @@
     "assets/8492721b-b746-4eb3-b6c5-b2df46e5577d.svg": "/assets/brand.84c2ff30a2bc.svg"
   },
   "totals": {
-    "assetBytes": 21131045,
+    "assetBytes": 21131242,
     "uniqueAssets": 38,
     "referencedSourceAssets": 74
   }

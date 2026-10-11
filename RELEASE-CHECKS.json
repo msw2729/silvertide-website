@@ -3,57 +3,57 @@
   "routeCount": 10,
   "legacyRedirectCount": 11,
   "uniqueAssets": 38,
-  "assetBytes": 21131045,
+  "assetBytes": 21131242,
   "routeBudgets": [
     {
       "route": "/",
-      "allNonVideoBytes": 618905,
-      "documentScriptsCssFontsBytes": 352206
+      "allNonVideoBytes": 622535,
+      "documentScriptsCssFontsBytes": 355836
     },
     {
       "route": "/es/",
-      "allNonVideoBytes": 625910,
-      "documentScriptsCssFontsBytes": 353579
+      "allNonVideoBytes": 629783,
+      "documentScriptsCssFontsBytes": 357452
     },
     {
       "route": "/what-we-do/",
-      "allNonVideoBytes": 1498245,
-      "documentScriptsCssFontsBytes": 340666
+      "allNonVideoBytes": 1498606,
+      "documentScriptsCssFontsBytes": 341027
     },
     {
       "route": "/es/que-hacemos/",
-      "allNonVideoBytes": 1505162,
-      "documentScriptsCssFontsBytes": 341951
+      "allNonVideoBytes": 1505523,
+      "documentScriptsCssFontsBytes": 342312
     },
     {
       "route": "/about/",
-      "allNonVideoBytes": 793415,
-      "documentScriptsCssFontsBytes": 335838
+      "allNonVideoBytes": 793757,
+      "documentScriptsCssFontsBytes": 336180
     },
     {
       "route": "/es/quienes-somos/",
-      "allNonVideoBytes": 800214,
-      "documentScriptsCssFontsBytes": 337005
+      "allNonVideoBytes": 800556,
+      "documentScriptsCssFontsBytes": 337347
     },
     {
       "route": "/careers/",
-      "allNonVideoBytes": 471308,
-      "documentScriptsCssFontsBytes": 336247
+      "allNonVideoBytes": 471667,
+      "documentScriptsCssFontsBytes": 336606
     },
     {
       "route": "/es/trabaja-con-nosotros/",
-      "allNonVideoBytes": 478008,
-      "documentScriptsCssFontsBytes": 337315
+      "allNonVideoBytes": 478367,
+      "documentScriptsCssFontsBytes": 337674
     },
     {
       "route": "/contact/",
-      "allNonVideoBytes": 596394,
-      "documentScriptsCssFontsBytes": 336045
+      "allNonVideoBytes": 596755,
+      "documentScriptsCssFontsBytes": 336406
     },
     {
       "route": "/es/contacto/",
-      "allNonVideoBytes": 602814,
-      "documentScriptsCssFontsBytes": 336833
+      "allNonVideoBytes": 603175,
+      "documentScriptsCssFontsBytes": 337194
     }
   ],
   "errors": [],

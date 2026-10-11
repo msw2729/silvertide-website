@@ -31,6 +31,8 @@ body .chain::-webkit-scrollbar-thumb { background: #9FB0C0; border-radius: 4px; 
 @media (max-width: 1100px), (max-height: 600px) {
   .site-hero { position: relative !important; height: auto !important; min-height: 100svh; }
   .site-hero .hero-body { flex: 1 0 auto !important; gap: 36px !important; padding-top: 20px !important; padding-bottom: 28px !important; }
+  /* Keep the original homepage copy footprint, so reordering does not recrop the film. */
+  .hero-headline-column.home-headline > div { max-width: 380px !important; margin-top: 12px !important; }
   .site-hero .dim { display: none; }
   .site-hero .hero-teaser { flex-basis: 100% !important; width: 100%; max-width: 480px; }
   .site-footer { position: relative !important; }

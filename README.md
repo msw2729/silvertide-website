@@ -27,3 +27,7 @@ Checks cover both languages, required fields, email validity, all submitted fiel
 The English home is / and the Spanish home is /es/. Section URLs use real folders with index.html. Legacy .dc.html addresses redirect to matching clean routes. See README.txt and route-manifest.json for the full route map.
 
 The hero keeps its full 45-second film. A responsive first-frame WebP appears before playback starts; phones receive a smaller H.264 video. Responsive photos and content-hashed assets reduce transfers and allow safe long-lived asset caching. Reduced-motion and data-saving preferences start with the still image and allow manual playback.
+
+## Search discovery
+
+Canonical URLs and reciprocal EN/ES hreflang links use the final HTTPS www host. `sitemap.xml` lists all ten public routes and their language alternatives; `robots.txt` allows crawling and advertises it. Homepage teaser cards have real source links and localized text, while DCLogic still controls rotation, focus and visibility. No crawler exclusions mask broken links.
