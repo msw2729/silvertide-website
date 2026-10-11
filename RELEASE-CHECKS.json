@@ -3,63 +3,63 @@
   "routeCount": 10,
   "legacyRedirectCount": 11,
   "uniqueAssets": 41,
-  "assetBytes": 21141998,
+  "assetBytes": 21143482,
   "routeBudgets": [
     {
       "route": "/",
-      "allNonVideoBytes": 633459,
-      "documentScriptsCssFontsBytes": 366760
+      "allNonVideoBytes": 634943,
+      "documentScriptsCssFontsBytes": 368244
     },
     {
       "route": "/es/",
-      "allNonVideoBytes": 640707,
-      "documentScriptsCssFontsBytes": 368376
+      "allNonVideoBytes": 642191,
+      "documentScriptsCssFontsBytes": 369860
     },
     {
       "route": "/what-we-do/",
-      "allNonVideoBytes": 1509527,
-      "documentScriptsCssFontsBytes": 351948
+      "allNonVideoBytes": 1511011,
+      "documentScriptsCssFontsBytes": 353432
     },
     {
       "route": "/es/que-hacemos/",
-      "allNonVideoBytes": 1516444,
-      "documentScriptsCssFontsBytes": 353233
+      "allNonVideoBytes": 1517928,
+      "documentScriptsCssFontsBytes": 354717
     },
     {
       "route": "/about/",
-      "allNonVideoBytes": 804678,
-      "documentScriptsCssFontsBytes": 347101
+      "allNonVideoBytes": 806162,
+      "documentScriptsCssFontsBytes": 348585
     },
     {
       "route": "/es/quienes-somos/",
-      "allNonVideoBytes": 811477,
-      "documentScriptsCssFontsBytes": 348268
+      "allNonVideoBytes": 812961,
+      "documentScriptsCssFontsBytes": 349752
     },
     {
       "route": "/careers/",
-      "allNonVideoBytes": 482588,
-      "documentScriptsCssFontsBytes": 347527
+      "allNonVideoBytes": 484072,
+      "documentScriptsCssFontsBytes": 349011
     },
     {
       "route": "/es/trabaja-con-nosotros/",
-      "allNonVideoBytes": 489288,
-      "documentScriptsCssFontsBytes": 348595
+      "allNonVideoBytes": 490772,
+      "documentScriptsCssFontsBytes": 350079
     },
     {
       "route": "/contact/",
-      "allNonVideoBytes": 607748,
-      "documentScriptsCssFontsBytes": 347399
+      "allNonVideoBytes": 609232,
+      "documentScriptsCssFontsBytes": 348883
     },
     {
       "route": "/es/contacto/",
-      "allNonVideoBytes": 614168,
-      "documentScriptsCssFontsBytes": 348187
+      "allNonVideoBytes": 615652,
+      "documentScriptsCssFontsBytes": 349671
     }
   ],
   "errors": [],
   "notes": [
     "Static verification does not replace browser layout/playback checks.",
     "Route budgets count uncompressed files; non-video totals include all responsive variants.",
-    "Includes three consent-gated analytics assets; Google-hosted code is excluded and is not requested while tracking is disabled or consent is absent."
+    "Includes three consent-gated analytics assets; Google-hosted code excluded, no requests while disabled or consent absent."
   ]
 }

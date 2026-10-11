@@ -34,11 +34,11 @@
   var granted = false, loaded = false, pageSent = false, scrolled = false;
   var copy = es ? {
     heading: 'Cookies de analítica',
-    body: 'Con tu permiso, utilizamos Google Analytics para medir las visitas, la navegación y las consultas enviadas. No enviamos a Analytics los datos que escribes en el formulario. Puedes rechazar las cookies de analítica y seguir utilizando el sitio y el formulario.',
+    body: 'Con tu permiso, utilizamos Google Analytics para medir las visitas, las fuentes de tráfico, la navegación y las consultas enviadas. No enviamos a Analytics los datos que escribes en el formulario. Puedes rechazar las cookies de analítica y seguir utilizando el sitio y el formulario.',
     accept: 'Aceptar analítica', reject: 'Rechazar analítica', settings: 'Preferencias de cookies', privacy: 'Aviso de privacidad'
   } : {
     heading: 'Analytics cookies',
-    body: 'With your permission, we use Google Analytics to measure visits, navigation and submitted inquiries. We do not send the details you type into the form to Analytics. You can reject analytics cookies and still use the site and inquiry form.',
+    body: 'With your permission, we use Google Analytics to measure visits, traffic sources, navigation and submitted inquiries. We do not send the details you type into the form to Analytics. You can reject analytics cookies and still use the site and inquiry form.',
     accept: 'Accept analytics', reject: 'Reject analytics', settings: 'Cookie settings', privacy: 'Privacy notice'
   };
   function readChoice() {
@@ -63,6 +63,28 @@
       return url.origin + '/'; // No referrer query, fragment, credentials or personal path.
     } catch (_) { return ''; }
   }
+  function safeCampaign() {
+    // Explicit blanks override raw UTM fallback. Never forward free-form query text.
+    var result = {campaign_source: '', campaign_medium: '', campaign_name: '', campaign_id: '', campaign_term: '', campaign_content: ''};
+    var query = new URLSearchParams(location.search);
+    function single(name) {
+      var values = query.getAll(name);
+      return values.length === 1 ? values[0].toLowerCase() : '';
+    }
+    var source = single('utm_source'), medium = single('utm_medium');
+    var sources = ['google', 'bing', 'linkedin', 'facebook', 'instagram', 'youtube', 'newsletter'];
+    var mediums = ['organic', 'cpc', 'ppc', 'email', 'referral', 'social', 'paid_social', 'display', 'affiliate'];
+    // Require a valid pair to avoid misleading partial campaign attribution.
+    if (!sources.includes(source) || !mediums.includes(medium)) return result;
+    result.campaign_source = source; result.campaign_medium = medium;
+    var names = Array.isArray(config.campaignNames) ? config.campaignNames : [];
+    var name = single('utm_campaign');
+    var approved = names.find(function (label) {
+      return typeof label === 'string' && /^[a-z][a-z0-9_-]{0,63}$/.test(label) && label === name;
+    });
+    if (approved) result.campaign_name = approved;
+    return result;
+  }
   function start() {
     granted = true;
     if (loaded) return;
@@ -72,12 +94,12 @@
     tag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
     tag('consent', 'update', {analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
     tag('js', new Date());
-    tag('config', id, {
+    tag('config', id, Object.assign({
       send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false,
       page_location: location.origin + path, page_referrer: safeReferrer(),
       page_title: 'Silver Tide | ' + routes[path][0], site_language: es ? 'es' : 'en',
       cookie_domain: location.hostname, cookie_path: '/', cookie_expires: 180 * 86400
-    });
+    }, safeCampaign()));
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);

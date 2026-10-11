@@ -31,7 +31,7 @@ const server=http.createServer((req,res)=>{
     return r.abort();
    });
    const route=locale==='en'?'/contact/':'/es/contacto/';
-   const visit=async()=>{await page.goto('about:blank');await page.goto(base+route+'?email=PRIVATE_QUERY#PRIVATE_FRAGMENT',{referer:'https://example.org/PRIVATE_REFERRER?email=PRIVATE_EMAIL'});await page.waitForSelector('body > div form');};
+   const visit=async()=>{await page.goto('about:blank');await page.goto(base+route+'?email=PRIVATE_QUERY&utm_source=linkedin&utm_medium=social&utm_campaign=test-supply#PRIVATE_FRAGMENT',{referer:'https://example.org/PRIVATE_REFERRER?email=PRIVATE_EMAIL'});await page.waitForSelector('body > div form');};
    const events=()=>page.evaluate(()=>Array.from(window.dataLayer||[],a=>Array.from(a)).filter(a=>a[0]==='event'));
    await visit();assert.equal(google,0);assert.equal(await page.locator('#analytics-consent').count(),0);
    enabled=true;await visit();
@@ -64,6 +64,8 @@ const server=http.createServer((req,res)=>{
    assert.equal(cfg.send_page_view,false);assert.equal(cfg.allow_google_signals,false);assert.equal(cfg.allow_ad_personalization_signals,false);
    assert.equal(cfg.page_location,base+route);
    assert.equal(cfg.page_referrer,'https://example.org/');
+   assert.equal(cfg.campaign_source,'linkedin');assert.equal(cfg.campaign_medium,'social');
+   assert.equal(cfg.campaign_name,'','No campaign name is accepted without an explicit reviewed allowlist');
    assert.equal(commands.find(a=>a[0]==='consent'&&a[1]==='update')[2].ad_user_data,'denied');
    await page.locator('form button[type=button]').click();
    await page.locator('form [type=submit]').click();
@@ -116,7 +118,7 @@ const server=http.createServer((req,res)=>{
   await context.addInitScript(()=>localStorage.setItem('silvertide-analytics-consent-v1',JSON.stringify({choice:'granted',expires:Date.now()+60000})));
   await context.route('**/*',r=>{
    const u=r.request().url();
-   if(u===base+'/assets/analytics-config.js')return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-MP521GB8WR",privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
+   if(u===base+'/assets/analytics-config.js')return r.fulfill({contentType:'text/javascript',body:'window.silverTideAnalyticsConfig={enabled:true,measurementId:"G-MP521GB8WR",campaignNames:["test-supply"],privacyNoticeEn:"/privacy/",privacyNoticeEs:"/es/privacidad/"};'});
    if(u.startsWith(base+'/'))return r.continue();
    if(u.startsWith('https://www.googletagmanager.com/gtag/js'))return r.fulfill({contentType:'text/javascript',body:'/* mock */'});
    return r.abort();
@@ -132,6 +134,27 @@ const server=http.createServer((req,res)=>{
    assert.equal(data.find(a=>a[0]==='config')[2].page_location,base+route.route);
    assert.equal(data.find(a=>a[0]==='config')[2].site_language,route.locale);
   }
+  for (const [query, expected] of [
+   ['utm_source=LinkedIn&utm_medium=SOCIAL&utm_campaign=test-supply&email=PRIVATE_EMAIL&gclid=PRIVATE_CLICK&utm_term=PRIVATE_TERM&utm_content=PRIVATE_CONTENT&utm_id=PRIVATE_ID', ['linkedin','social','test-supply']],
+   ['utm_source=newsletter&utm_medium=email&utm_campaign=private%40example.com', ['newsletter','email','']],
+   ['utm_source=google&utm_medium=cpc&utm_campaign=unreviewed-label', ['google','cpc','']],
+   ['utm_source=private%40example.com&utm_medium=email&utm_campaign=test-supply', ['','','']],
+   ['utm_source=google&utm_source=PRIVATE_TOKEN&utm_medium=cpc', ['','','']],
+   ['utm_source=google&utm_medium=PRIVATE_TOKEN', ['','','']],
+   ['utm_source=unknown-source&utm_medium=referral', ['','','']],
+   ['', ['','','']]
+  ]) {
+   await page.goto(base+'/contact/?'+query+'#PRIVATE_FRAGMENT',{referer:'https://partner.example/PRIVATE_PATH?token=PRIVATE_TOKEN'});
+   await page.waitForFunction(()=>!!window.dataLayer);
+   const commands=await page.evaluate(()=>Array.from(window.dataLayer,a=>Array.from(a)));
+   const cfg=commands.find(a=>a[0]==='config')[2];
+   assert.deepEqual([cfg.campaign_source,cfg.campaign_medium,cfg.campaign_name],expected);
+   for(const field of ['campaign_id','campaign_term','campaign_content'])assert.equal(cfg[field],'');
+   assert.equal(cfg.page_location,base+'/contact/');assert.equal(cfg.page_referrer,'https://partner.example/');
+   assert.ok(!/PRIVATE_|private@|unreviewed-label|unknown-source/.test(JSON.stringify(commands)));
+   assert.equal(commands.filter(a=>a[0]==='event'&&a[1]==='page_view').length,1);
+  }
+  console.log('PASS: allowlisted UTM source/medium and reviewed campaign; unknown/personal/duplicate parameters excluded; referrer origin retained');
   await context.close();
   console.log('PASS: exactly one sanitized pageview and correct language on all ten clean routes');
   console.log('All Google and Formspree traffic mocked; no live analytics or inquiries sent.');
