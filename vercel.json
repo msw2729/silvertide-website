@@ -1,0 +1,77 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/Main.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Main.es.dc.html",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/WhatWeDo.dc.html",
+      "destination": "/what-we-do/",
+      "permanent": true
+    },
+    {
+      "source": "/WhatWeDo.es.dc.html",
+      "destination": "/es/que-hacemos/",
+      "permanent": true
+    },
+    {
+      "source": "/About.dc.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/About.es.dc.html",
+      "destination": "/es/quienes-somos/",
+      "permanent": true
+    },
+    {
+      "source": "/Careers.dc.html",
+      "destination": "/careers/",
+      "permanent": true
+    },
+    {
+      "source": "/Careers.es.dc.html",
+      "destination": "/es/trabaja-con-nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/Contact.dc.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/Contact.es.dc.html",
+      "destination": "/es/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/index.es.html",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/:file([a-zA-Z0-9_-]+\\.[a-f0-9]{12}\\.[a-zA-Z0-9]+)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

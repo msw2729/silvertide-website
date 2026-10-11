@@ -8,24 +8,38 @@ const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const endpoint = 'https://formspree.io/f/xppqljkw';
 const server = http.createServer((req, res) => {
-  const filename = path.join(root, decodeURIComponent(req.url.split('?')[0]));
-  if (!filename.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
-  fs.readFile(filename, (err, data) => {
+  let pathname;
+  try { pathname = decodeURIComponent(new URL(req.url, 'http://127.0.0.1').pathname); }
+  catch (_) { res.writeHead(400).end(); return; }
+  let filename = path.resolve(root, '.' + pathname);
+  const relative = path.relative(root, filename);
+  if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative)) { res.writeHead(403).end(); return; }
+  fs.stat(filename, (err, stat) => {
     if (err) { res.writeHead(404).end(); return; }
-    const ext = path.extname(filename);
-    res.setHeader('Content-Type', ({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml'})[ext] || 'application/octet-stream');
-    res.end(data);
+    if (stat.isDirectory()) filename = path.join(filename, 'index.html');
+    fs.readFile(filename, (readError, data) => {
+      if (readError) { res.writeHead(404).end(); return; }
+      const ext = path.extname(filename);
+      res.setHeader('Content-Type', ({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.webp':'image/webp','.woff2':'font/woff2'})[ext] || 'application/octet-stream');
+      res.end(data);
+    });
   });
 });
 (async () => {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  const baseURL = (process.env.BASE_URL || `http://127.0.0.1:${server.address().port}`).replace(/\/+$/, '');
   const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
   try {
-    for (const file of fs.readdirSync(root).filter(x => x.endsWith('.html'))) {
-      const original = execFileSync('git', ['show', '4361451:' + file], { cwd: root, encoding: 'utf8' });
-      const current = fs.readFileSync(path.join(root, file), 'utf8');
+    // Legacy flat HTML files are redirects now. Compare each real route with
+    // its original page, so redirects cannot silently skip the email checks.
+    const routes = JSON.parse(fs.readFileSync(path.join(root, 'route-manifest.json'), 'utf8')).routes;
+    const expectedPages = ['Main', 'WhatWeDo', 'About', 'Careers', 'Contact'].flatMap(page => [`${page}.dc.html`, `${page}.es.dc.html`]);
+    assert.deepEqual(routes.map(route => route.source).sort(), expectedPages.sort(), 'every original EN/ES page has a clean route');
+    for (const route of routes) {
+      const original = execFileSync('git', ['show', '4361451:' + route.source], { cwd: root, encoding: 'utf8' });
+      const current = fs.readFileSync(path.join(root, route.file), 'utf8');
       const links = s => s.match(/href="mailto:[^"]*"/g) || [];
-      assert.deepEqual(links(current), links(original), file + ' direct emails unchanged');
+      assert.deepEqual(links(current), links(original), route.route + ' direct emails unchanged');
     }
     console.log('PASS: all existing direct email links unchanged');
     for (const lang of ['en', 'es']) {
@@ -35,14 +49,14 @@ const server = http.createServer((req, res) => {
       let requests = [], mode = 'success', release;
       await page.route('**/*', async route => {
         const req = route.request();
-        if (req.url().startsWith(process.env.BASE_URL || 'http://127.0.0.1:')) return route.continue();
+        if (req.url().startsWith(baseURL + '/')) return route.continue();
         if (req.url() !== endpoint) return route.abort();
         requests.push(req);
         if (mode === 'pending') await new Promise(resolve => { release = resolve; });
         if (mode === 'network') return route.abort('failed');
         return route.fulfill({ status: mode === '422' ? 422 : mode === 'error' ? 500 : 200, contentType: mode === 'error' ? 'text/html' : 'application/json', body: mode === 'error' ? '<h1>Unavailable</h1>' : mode === '422' ? '{"errors":[{"field":"email","message":"Invalid"}]}' : '{"ok":true}' });
       });
-      await page.goto(`${process.env.BASE_URL || `http://127.0.0.1:${server.address().port}`}/${lang === 'en' ? 'Contact.dc.html' : 'Contact.es.dc.html'}`);
+      await page.goto(baseURL + (lang === 'en' ? '/contact/' : '/es/contacto/'));
       await page.waitForSelector('body > div form');
       const form = page.locator('form');
       const submit = form.locator('[type=submit]');

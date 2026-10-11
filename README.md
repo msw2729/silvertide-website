@@ -4,7 +4,7 @@ Static bilingual site using the bundled DCLogic/React runtime. Serve this direct
 
 ## Contact forms
 
-`Contact.dc.html` and `Contact.es.dc.html` POST all seven existing fields to `https://formspree.io/f/xppqljkw`. The DCLogic submit handler uses native `fetch`, `FormData`, and `Accept: application/json`. Localized status text is announced in a live region and focused after completion. Required name, email and message fields retain native browser validation.
+`/contact/` and `/es/contacto/` POST all seven existing fields to `https://formspree.io/f/xppqljkw`. The DCLogic submit handler uses native `fetch`, `FormData`, and `Accept: application/json`. Localized status text is announced in a live region and focused after completion. Required name, email and message fields retain native browser validation.
 
 Submission is locked while pending and after success. Errors and the 30-second timeout retain inputs and allow a manual retry; there are no automatic retries. A timed-out request may have reached Formspree, so the error says confirmation was unavailable. After success, “Send another enquiry” clears the form deliberately. HTTP success confirms endpoint acceptance, not inbox delivery.
 
@@ -19,3 +19,9 @@ Official references: [HTML forms](https://help.formspree.io/articles/building-yo
 With Node.js, Playwright and Chromium available, run `node tests/formspree.cjs`. Set `CHROME_PATH` to an installed Chrome executable if needed. Playwright is test tooling only; it is not a site dependency. The test starts its own local server, blocks external resources and intercepts every Formspree request. It never sends real inquiries.
 
 Checks cover both languages, required fields, email validity, all submitted fields, localized pending/success/422/500/network states, repeated submits, retry, deliberate reset, accessibility focus, existing menu re-renders, mobile overflow and preservation of every original direct email link.
+
+## Routes and media delivery
+
+The English home is / and the Spanish home is /es/. Section URLs use real folders with index.html. Legacy .dc.html addresses redirect to matching clean routes. See README.txt and route-manifest.json for the full route map.
+
+The hero keeps its full 45-second film. A responsive first-frame WebP appears before playback starts; phones receive a smaller H.264 video. Responsive photos and content-hashed assets reduce transfers and allow safe long-lived asset caching. Reduced-motion and data-saving preferences start with the still image and allow manual playback.

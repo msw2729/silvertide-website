@@ -1,0 +1,473 @@
+{
+  "origin": "https://silvertideglobal.com",
+  "routes": [
+    {
+      "source": "Main.dc.html",
+      "route": "/",
+      "locale": "en",
+      "file": "index.html",
+      "bytes": 58694
+    },
+    {
+      "source": "Main.es.dc.html",
+      "route": "/es/",
+      "locale": "es",
+      "file": "es/index.html",
+      "bytes": 60067
+    },
+    {
+      "source": "WhatWeDo.dc.html",
+      "route": "/what-we-do/",
+      "locale": "en",
+      "file": "what-we-do/index.html",
+      "bytes": 47154
+    },
+    {
+      "source": "WhatWeDo.es.dc.html",
+      "route": "/es/que-hacemos/",
+      "locale": "es",
+      "file": "es/que-hacemos/index.html",
+      "bytes": 48439
+    },
+    {
+      "source": "About.dc.html",
+      "route": "/about/",
+      "locale": "en",
+      "file": "about/index.html",
+      "bytes": 42326
+    },
+    {
+      "source": "About.es.dc.html",
+      "route": "/es/quienes-somos/",
+      "locale": "es",
+      "file": "es/quienes-somos/index.html",
+      "bytes": 43493
+    },
+    {
+      "source": "Careers.dc.html",
+      "route": "/careers/",
+      "locale": "en",
+      "file": "careers/index.html",
+      "bytes": 42735
+    },
+    {
+      "source": "Careers.es.dc.html",
+      "route": "/es/trabaja-con-nosotros/",
+      "locale": "es",
+      "file": "es/trabaja-con-nosotros/index.html",
+      "bytes": 43803
+    },
+    {
+      "source": "Contact.dc.html",
+      "route": "/contact/",
+      "locale": "en",
+      "file": "contact/index.html",
+      "bytes": 42533
+    },
+    {
+      "source": "Contact.es.dc.html",
+      "route": "/es/contacto/",
+      "locale": "es",
+      "file": "es/contacto/index.html",
+      "bytes": 43321
+    }
+  ],
+  "legacy": {
+    "Main.dc.html": "/",
+    "Main.es.dc.html": "/es/",
+    "WhatWeDo.dc.html": "/what-we-do/",
+    "WhatWeDo.es.dc.html": "/es/que-hacemos/",
+    "About.dc.html": "/about/",
+    "About.es.dc.html": "/es/quienes-somos/",
+    "Careers.dc.html": "/careers/",
+    "Careers.es.dc.html": "/es/trabaja-con-nosotros/",
+    "Contact.dc.html": "/contact/",
+    "Contact.es.dc.html": "/es/contacto/",
+    "index.es.html": "/es/"
+  },
+  "assets": {
+    "/assets/react.d949f1c3687a.js": {
+      "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+      "bytes": 10751,
+      "sources": [
+        "assets/c4ecec26-9e7e-4dac-8945-89908de48893.js",
+        "assets/c868aa33-83ae-4802-9d4d-c90fda878655.js",
+        "assets/56896603-a75f-476f-b754-0198e34ea8f2.js",
+        "assets/265aebba-a92d-4196-85ab-dbb6b1ebf80d.js",
+        "assets/dfc83cbb-b381-4a88-990a-945236b43bf3.js"
+      ]
+    },
+    "/assets/react-dom.35f4f974f4b2.js": {
+      "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+      "bytes": 131835,
+      "sources": [
+        "assets/49b3f1d5-0254-4a5b-b30b-6657f0c345e3.js",
+        "assets/f647cbce-c08e-43e9-9cf0-000ac54ca83f.js",
+        "assets/abdb0eab-34f3-4e97-ada7-ff07d5e90e7a.js",
+        "assets/498ff500-2051-4bfa-80c2-e0c5c50c456d.js",
+        "assets/c7455aa4-ca14-4a97-bb7a-b33225328bbe.js"
+      ]
+    },
+    "/assets/hero-silvertide-first-frame-mobile.b8a07f3e9fd1.webp": {
+      "sha256": "b8a07f3e9fd1b5ee24baa9f838cbba28bc2d69838ec0e99aebe6fd59e199ac65",
+      "bytes": 39452,
+      "sources": [
+        "assets/hero-silvertide-first-frame-mobile.webp"
+      ]
+    },
+    "/assets/hero-silvertide-first-frame-desktop.0020aa83681e.webp": {
+      "sha256": "0020aa83681e47c327693b558b3c17e906d940cb59b89ea92cde07866cb859a5",
+      "bytes": 92186,
+      "sources": [
+        "assets/hero-silvertide-first-frame-desktop.webp"
+      ]
+    },
+    "/assets/dc-runtime.654b7f6201e7.js": {
+      "sha256": "654b7f6201e7e08c0aa3d9c670125d53b47f1438141ecd0d7df05589a877b324",
+      "bytes": 45305,
+      "sources": [
+        "assets/a16aa21a-1155-4dfa-9215-2c8d3467b518.js",
+        "assets/f762d8b9-b120-4aff-a22d-442128cadc75.js",
+        "assets/8d7c067d-bb32-4a6a-a546-4b0bf24aac92.js",
+        "assets/87d7c369-7d3b-4dfe-b881-0ce2d7a64607.js",
+        "assets/713681c9-181a-41e7-9ed0-da3e2f8d30d3.js"
+      ]
+    },
+    "/assets/button-states.b2f3a96f4245.css": {
+      "sha256": "b2f3a96f424521e782b2308ceaa462f6ae143a713f712623ee4f8249ce34fd80",
+      "bytes": 2473,
+      "sources": [
+        "assets/button-states.css"
+      ]
+    },
+    "/assets/responsive.01da4bc000c3.css": {
+      "sha256": "01da4bc000c3d0fb6127b46310e648824ae764ba5fbdf8499c93dcd25a795130",
+      "bytes": 6099,
+      "sources": [
+        "assets/responsive.css"
+      ]
+    },
+    "/assets/site-navigation.0ca810fb5122.js": {
+      "sha256": "0ca810fb51224f1ef75922f597a1a1d61e46563033e4472a0604405fd6dab0a2",
+      "bytes": 1661,
+      "sources": [
+        "assets/site-navigation.js"
+      ]
+    },
+    "/assets/font.ac079950fd98.woff2": {
+      "sha256": "ac079950fd9885261c0f73d9e87233f31b5427333ce0eb20e26c119458493c40",
+      "bytes": 21148,
+      "sources": [
+        "assets/4f3bcd72-c1c8-436d-87a5-dcb9bd90833a.woff2",
+        "assets/34f30fd3-e230-4971-a504-030048ccc15c.woff2",
+        "assets/1c8d7376-3270-4bd7-8622-4e126fcb61ef.woff2",
+        "assets/96590c7e-542e-4975-8fbd-f2ee8b9a323b.woff2",
+        "assets/c25cd944-5b8e-4c82-8985-74e7caf21762.woff2"
+      ]
+    },
+    "/assets/font.500d3bfa4e42.woff2": {
+      "sha256": "500d3bfa4e42db97b676a8f1ae3fea651011fd4b73fee592b80b242353da9ead",
+      "bytes": 14060,
+      "sources": [
+        "assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2",
+        "assets/0afce8d4-698e-45fd-8940-0a0f9992bcb8.woff2",
+        "assets/16036bd6-62ae-4109-943e-0b0877353b26.woff2",
+        "assets/f8fb2fe8-22c8-4f91-b8c4-1717da1e8270.woff2",
+        "assets/a92e6bec-a7fc-444d-8f57-7e9c5607de1b.woff2"
+      ]
+    },
+    "/assets/font.f7a7830b81e3.woff2": {
+      "sha256": "f7a7830b81e351f89b91f0201de71c8d937e25df5a3e31ecca9b4ee877abedb7",
+      "bytes": 30672,
+      "sources": [
+        "assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2",
+        "assets/64d59379-f845-4c72-bcf5-1ff73765cc18.woff2",
+        "assets/691a6f71-da8b-4e92-8eaa-d6da4f2d4180.woff2",
+        "assets/9bfe0862-ab94-4e4a-b428-241d087afa07.woff2",
+        "assets/2f0ec585-4275-4b37-a606-c5559b10a9d0.woff2"
+      ]
+    },
+    "/assets/font.482366a12be7.woff2": {
+      "sha256": "482366a12be7caca759ef249a9e793f295f5bb2df0b155f7f02b72daba00ef73",
+      "bytes": 14796,
+      "sources": [
+        "assets/cb92df6e-72e9-4c86-98e1-bceb9ff5d093.woff2",
+        "assets/fc241fdf-374b-4e08-950b-58945ce56b14.woff2",
+        "assets/e2652376-b3aa-438a-b77c-e5b15cf9f924.woff2",
+        "assets/c4a1a1e7-907a-4275-8dcc-71aeec5666e1.woff2",
+        "assets/3663852c-8335-4f59-b81a-d8fce51e041a.woff2"
+      ]
+    },
+    "/assets/font.69eb3fa1ef78.woff2": {
+      "sha256": "69eb3fa1ef788d887adadc9b8bf14ce517a0a879724b22a5fb8b5e3122f7e72c",
+      "bytes": 14712,
+      "sources": [
+        "assets/aeea3bd1-e927-4e02-bfe9-a1c6f5211dc4.woff2",
+        "assets/201cb669-f635-472d-85b1-bd003e169cbe.woff2",
+        "assets/b706020d-7873-4bdb-96d4-32fc39f67b16.woff2",
+        "assets/cea16496-7cde-4523-b363-0f36a431affd.woff2",
+        "assets/a6e3137e-a1c1-4c27-b333-fe69f9715dc5.woff2"
+      ]
+    },
+    "/assets/hero-silvertide-45s-desktop.c1e81abe5913.mp4": {
+      "sha256": "c1e81abe5913bfd346e910414f8071600f6885cbff608c8b1863096669e04c8a",
+      "bytes": 12921370,
+      "sources": [
+        "assets/hero-silvertide-45s-desktop.mp4"
+      ]
+    },
+    "/assets/hero-silvertide-45s-mobile.485b5d165a72.mp4": {
+      "sha256": "485b5d165a727329921b7446d3ab77dd7acee501a53f36a8293718c0f3679be8",
+      "bytes": 6364503,
+      "sources": [
+        "assets/hero-silvertide-45s-mobile.mp4"
+      ]
+    },
+    "/assets/brand.84c2ff30a2bc.svg": {
+      "sha256": "84c2ff30a2bc756f70bb1368e037d347b5106d161c46d6adcf4145e5809787c8",
+      "bytes": 13881,
+      "sources": [
+        "assets/6a5cd94d-90e0-44c4-a1b6-945e74fda0ce.svg",
+        "assets/027a65c2-8fc4-4593-93ba-cc199d0fe01c.svg",
+        "assets/87647b77-3836-42cb-ad4e-bd5f6aba6b20.svg",
+        "assets/95e1b469-2645-49f1-a2fc-5118781b84dd.svg",
+        "assets/8492721b-b746-4eb3-b6c5-b2df46e5577d.svg"
+      ]
+    },
+    "/assets/team-collaboration-1280.55f354e6def7.webp": {
+      "sha256": "55f354e6def754ad0eaa4bd992c8f3b99da64977208560a3cb7cff42f1457aa9",
+      "bytes": 59992,
+      "sources": [
+        "assets/team-collaboration-1280.webp"
+      ]
+    },
+    "/assets/team-collaboration-640.fbfc575beefb.webp": {
+      "sha256": "fbfc575beefb04234e5c19620ff1a1aae5213b53fdd70f2fdfae6c343a7426b6",
+      "bytes": 21850,
+      "sources": [
+        "assets/team-collaboration-640.webp"
+      ]
+    },
+    "/assets/team-collaboration-960.f3c42aecf30a.webp": {
+      "sha256": "f3c42aecf30a98d2f7c4ae78ffcaa2eda43c8b658413aa18e79128ca5f7e19c1",
+      "bytes": 39338,
+      "sources": [
+        "assets/team-collaboration-960.webp"
+      ]
+    },
+    "/assets/silvertide-logo-es.05818269b280.svg": {
+      "sha256": "05818269b280f56703ad9ce87081e7452eed23792858a5404deb2a4cafd56866",
+      "bytes": 19513,
+      "sources": [
+        "assets/silvertide-logo-es.svg"
+      ]
+    },
+    "/assets/supply-chain-hero-1280.f9909bf39544.webp": {
+      "sha256": "f9909bf39544c9072399093e3e9b7e499203ecf96e69f4d574f54a4aeaec3015",
+      "bytes": 112314,
+      "sources": [
+        "assets/supply-chain-hero-1280.webp"
+      ]
+    },
+    "/assets/supply-chain-hero-640.2290b3d38800.webp": {
+      "sha256": "2290b3d38800efe8040d60b51a016e89e8fede4d0a7110785d04ec2fc9f2c6ee",
+      "bytes": 25702,
+      "sources": [
+        "assets/supply-chain-hero-640.webp"
+      ]
+    },
+    "/assets/supply-chain-hero-960.4b2a83776267.webp": {
+      "sha256": "4b2a83776267ee1ae02e9d8c1500a8b2a2c8252db70aa7655f8f386bbb367872",
+      "bytes": 60840,
+      "sources": [
+        "assets/supply-chain-hero-960.webp"
+      ]
+    },
+    "/assets/refinery-1280.457524fa91de.webp": {
+      "sha256": "457524fa91def945ffe17cf30668db5e7279a917e010af56988f73c09d6fa996",
+      "bytes": 201584,
+      "sources": [
+        "assets/refinery-1280.webp"
+      ]
+    },
+    "/assets/refinery-640.762d6d5b161c.webp": {
+      "sha256": "762d6d5b161c161145b6c71679c4e42b4b95e00c20a26b139886f81458f64dc0",
+      "bytes": 51310,
+      "sources": [
+        "assets/refinery-640.webp"
+      ]
+    },
+    "/assets/refinery-960.d9199b3b54c2.webp": {
+      "sha256": "d9199b3b54c2d9062d68191269eb7ed190ed0c509f90c89b91d33b4f0cc7bb70",
+      "bytes": 115804,
+      "sources": [
+        "assets/refinery-960.webp"
+      ]
+    },
+    "/assets/contract-planning-1280.958763acd069.webp": {
+      "sha256": "958763acd069d1357f95fb881ad22f1b4e38215757742822c8c8d93537311e5d",
+      "bytes": 64302,
+      "sources": [
+        "assets/contract-planning-1280.webp"
+      ]
+    },
+    "/assets/contract-planning-640.bebd073566c8.webp": {
+      "sha256": "bebd073566c85c0374f16a3d409ecd4b15e4c168e650689a6a7f26f28eb3eba2",
+      "bytes": 23368,
+      "sources": [
+        "assets/contract-planning-640.webp"
+      ]
+    },
+    "/assets/contract-planning-960.fd610f85e913.webp": {
+      "sha256": "fd610f85e913b00cd9b7869b8d6bc3df08c935865916c162a145261116395d1a",
+      "bytes": 41240,
+      "sources": [
+        "assets/contract-planning-960.webp"
+      ]
+    },
+    "/assets/harbour-night-1280.f13a549dc43d.webp": {
+      "sha256": "f13a549dc43dd59d8acc8cd87b5e19d9934006bc4f798573df1e1487d0d6043e",
+      "bytes": 111450,
+      "sources": [
+        "assets/harbour-night-1280.webp"
+      ]
+    },
+    "/assets/harbour-night-640.2edec2edb843.webp": {
+      "sha256": "2edec2edb84373f05cb78527fd27dc272d7e0fcaee4e8f881d4980c01aed2199",
+      "bytes": 26956,
+      "sources": [
+        "assets/harbour-night-640.webp"
+      ]
+    },
+    "/assets/harbour-night-960.1667cbb1423f.webp": {
+      "sha256": "1667cbb1423f57db63d52611838e558052ad317fbfadeaeb00b080b3aa8007e3",
+      "bytes": 62360,
+      "sources": [
+        "assets/harbour-night-960.webp"
+      ]
+    },
+    "/assets/terminal-dusk-1280.9a987572fad5.webp": {
+      "sha256": "9a987572fad574a148f747950fdda9a953783d25d27cef537d55684f503fc920",
+      "bytes": 133800,
+      "sources": [
+        "assets/terminal-dusk-1280.webp"
+      ]
+    },
+    "/assets/terminal-dusk-640.729bd273315d.webp": {
+      "sha256": "729bd273315d8ef6ad25a273f1db8c065ecff469e7b64029dfab9a27dfc38fb0",
+      "bytes": 35236,
+      "sources": [
+        "assets/terminal-dusk-640.webp"
+      ]
+    },
+    "/assets/terminal-dusk-960.f1170b38189f.webp": {
+      "sha256": "f1170b38189f900c9e55b9a6a665d89fb0ef7c35f8e805e7f7eefada8d0a574b",
+      "bytes": 77432,
+      "sources": [
+        "assets/terminal-dusk-960.webp"
+      ]
+    },
+    "/assets/compliance-review-1280.15295b097d66.webp": {
+      "sha256": "15295b097d6696896312775c16e68b810f75c8cac456215a79bac2cdeed6f68c",
+      "bytes": 60146,
+      "sources": [
+        "assets/compliance-review-1280.webp"
+      ]
+    },
+    "/assets/compliance-review-640.76fd25fb7ae3.webp": {
+      "sha256": "76fd25fb7ae3ba8aaaa4aa11d298c69c0935ee41598874c417937f552d8df526",
+      "bytes": 22014,
+      "sources": [
+        "assets/compliance-review-640.webp"
+      ]
+    },
+    "/assets/compliance-review-960.2ca4ff8d6610.webp": {
+      "sha256": "2ca4ff8d6610dbf6373b935969fefac67fad7e884f49c761b3b3535270f6cdc4",
+      "bytes": 39590,
+      "sources": [
+        "assets/compliance-review-960.webp"
+      ]
+    }
+  },
+  "assetMap": {
+    "assets/c4ecec26-9e7e-4dac-8945-89908de48893.js": "/assets/react.d949f1c3687a.js",
+    "assets/49b3f1d5-0254-4a5b-b30b-6657f0c345e3.js": "/assets/react-dom.35f4f974f4b2.js",
+    "assets/hero-silvertide-first-frame-mobile.webp": "/assets/hero-silvertide-first-frame-mobile.b8a07f3e9fd1.webp",
+    "assets/hero-silvertide-first-frame-desktop.webp": "/assets/hero-silvertide-first-frame-desktop.0020aa83681e.webp",
+    "assets/a16aa21a-1155-4dfa-9215-2c8d3467b518.js": "/assets/dc-runtime.654b7f6201e7.js",
+    "assets/button-states.css": "/assets/button-states.b2f3a96f4245.css",
+    "assets/responsive.css": "/assets/responsive.01da4bc000c3.css",
+    "assets/site-navigation.js": "/assets/site-navigation.0ca810fb5122.js",
+    "assets/4f3bcd72-c1c8-436d-87a5-dcb9bd90833a.woff2": "/assets/font.ac079950fd98.woff2",
+    "assets/f51095a0-1a9d-4539-9788-79bd50450e12.woff2": "/assets/font.500d3bfa4e42.woff2",
+    "assets/de18337f-50c1-4a1f-9a0e-071e0f6051d1.woff2": "/assets/font.f7a7830b81e3.woff2",
+    "assets/cb92df6e-72e9-4c86-98e1-bceb9ff5d093.woff2": "/assets/font.482366a12be7.woff2",
+    "assets/aeea3bd1-e927-4e02-bfe9-a1c6f5211dc4.woff2": "/assets/font.69eb3fa1ef78.woff2",
+    "assets/hero-silvertide-45s-desktop.mp4": "/assets/hero-silvertide-45s-desktop.c1e81abe5913.mp4",
+    "assets/hero-silvertide-45s-mobile.mp4": "/assets/hero-silvertide-45s-mobile.485b5d165a72.mp4",
+    "assets/6a5cd94d-90e0-44c4-a1b6-945e74fda0ce.svg": "/assets/brand.84c2ff30a2bc.svg",
+    "assets/team-collaboration-1280.webp": "/assets/team-collaboration-1280.55f354e6def7.webp",
+    "assets/team-collaboration-640.webp": "/assets/team-collaboration-640.fbfc575beefb.webp",
+    "assets/team-collaboration-960.webp": "/assets/team-collaboration-960.f3c42aecf30a.webp",
+    "assets/silvertide-logo-es.svg": "/assets/silvertide-logo-es.05818269b280.svg",
+    "assets/c868aa33-83ae-4802-9d4d-c90fda878655.js": "/assets/react.d949f1c3687a.js",
+    "assets/f647cbce-c08e-43e9-9cf0-000ac54ca83f.js": "/assets/react-dom.35f4f974f4b2.js",
+    "assets/f762d8b9-b120-4aff-a22d-442128cadc75.js": "/assets/dc-runtime.654b7f6201e7.js",
+    "assets/34f30fd3-e230-4971-a504-030048ccc15c.woff2": "/assets/font.ac079950fd98.woff2",
+    "assets/0afce8d4-698e-45fd-8940-0a0f9992bcb8.woff2": "/assets/font.500d3bfa4e42.woff2",
+    "assets/64d59379-f845-4c72-bcf5-1ff73765cc18.woff2": "/assets/font.f7a7830b81e3.woff2",
+    "assets/fc241fdf-374b-4e08-950b-58945ce56b14.woff2": "/assets/font.482366a12be7.woff2",
+    "assets/201cb669-f635-472d-85b1-bd003e169cbe.woff2": "/assets/font.69eb3fa1ef78.woff2",
+    "assets/supply-chain-hero-1280.webp": "/assets/supply-chain-hero-1280.f9909bf39544.webp",
+    "assets/supply-chain-hero-640.webp": "/assets/supply-chain-hero-640.2290b3d38800.webp",
+    "assets/supply-chain-hero-960.webp": "/assets/supply-chain-hero-960.4b2a83776267.webp",
+    "assets/027a65c2-8fc4-4593-93ba-cc199d0fe01c.svg": "/assets/brand.84c2ff30a2bc.svg",
+    "assets/refinery-1280.webp": "/assets/refinery-1280.457524fa91de.webp",
+    "assets/refinery-640.webp": "/assets/refinery-640.762d6d5b161c.webp",
+    "assets/refinery-960.webp": "/assets/refinery-960.d9199b3b54c2.webp",
+    "assets/contract-planning-1280.webp": "/assets/contract-planning-1280.958763acd069.webp",
+    "assets/contract-planning-640.webp": "/assets/contract-planning-640.bebd073566c8.webp",
+    "assets/contract-planning-960.webp": "/assets/contract-planning-960.fd610f85e913.webp",
+    "assets/harbour-night-1280.webp": "/assets/harbour-night-1280.f13a549dc43d.webp",
+    "assets/harbour-night-640.webp": "/assets/harbour-night-640.2edec2edb843.webp",
+    "assets/harbour-night-960.webp": "/assets/harbour-night-960.1667cbb1423f.webp",
+    "assets/terminal-dusk-1280.webp": "/assets/terminal-dusk-1280.9a987572fad5.webp",
+    "assets/terminal-dusk-640.webp": "/assets/terminal-dusk-640.729bd273315d.webp",
+    "assets/terminal-dusk-960.webp": "/assets/terminal-dusk-960.f1170b38189f.webp",
+    "assets/56896603-a75f-476f-b754-0198e34ea8f2.js": "/assets/react.d949f1c3687a.js",
+    "assets/abdb0eab-34f3-4e97-ada7-ff07d5e90e7a.js": "/assets/react-dom.35f4f974f4b2.js",
+    "assets/8d7c067d-bb32-4a6a-a546-4b0bf24aac92.js": "/assets/dc-runtime.654b7f6201e7.js",
+    "assets/1c8d7376-3270-4bd7-8622-4e126fcb61ef.woff2": "/assets/font.ac079950fd98.woff2",
+    "assets/16036bd6-62ae-4109-943e-0b0877353b26.woff2": "/assets/font.500d3bfa4e42.woff2",
+    "assets/691a6f71-da8b-4e92-8eaa-d6da4f2d4180.woff2": "/assets/font.f7a7830b81e3.woff2",
+    "assets/e2652376-b3aa-438a-b77c-e5b15cf9f924.woff2": "/assets/font.482366a12be7.woff2",
+    "assets/b706020d-7873-4bdb-96d4-32fc39f67b16.woff2": "/assets/font.69eb3fa1ef78.woff2",
+    "assets/87647b77-3836-42cb-ad4e-bd5f6aba6b20.svg": "/assets/brand.84c2ff30a2bc.svg",
+    "assets/compliance-review-1280.webp": "/assets/compliance-review-1280.15295b097d66.webp",
+    "assets/compliance-review-640.webp": "/assets/compliance-review-640.76fd25fb7ae3.webp",
+    "assets/compliance-review-960.webp": "/assets/compliance-review-960.2ca4ff8d6610.webp",
+    "assets/265aebba-a92d-4196-85ab-dbb6b1ebf80d.js": "/assets/react.d949f1c3687a.js",
+    "assets/498ff500-2051-4bfa-80c2-e0c5c50c456d.js": "/assets/react-dom.35f4f974f4b2.js",
+    "assets/87d7c369-7d3b-4dfe-b881-0ce2d7a64607.js": "/assets/dc-runtime.654b7f6201e7.js",
+    "assets/96590c7e-542e-4975-8fbd-f2ee8b9a323b.woff2": "/assets/font.ac079950fd98.woff2",
+    "assets/f8fb2fe8-22c8-4f91-b8c4-1717da1e8270.woff2": "/assets/font.500d3bfa4e42.woff2",
+    "assets/9bfe0862-ab94-4e4a-b428-241d087afa07.woff2": "/assets/font.f7a7830b81e3.woff2",
+    "assets/c4a1a1e7-907a-4275-8dcc-71aeec5666e1.woff2": "/assets/font.482366a12be7.woff2",
+    "assets/cea16496-7cde-4523-b363-0f36a431affd.woff2": "/assets/font.69eb3fa1ef78.woff2",
+    "assets/95e1b469-2645-49f1-a2fc-5118781b84dd.svg": "/assets/brand.84c2ff30a2bc.svg",
+    "assets/dfc83cbb-b381-4a88-990a-945236b43bf3.js": "/assets/react.d949f1c3687a.js",
+    "assets/c7455aa4-ca14-4a97-bb7a-b33225328bbe.js": "/assets/react-dom.35f4f974f4b2.js",
+    "assets/713681c9-181a-41e7-9ed0-da3e2f8d30d3.js": "/assets/dc-runtime.654b7f6201e7.js",
+    "assets/c25cd944-5b8e-4c82-8985-74e7caf21762.woff2": "/assets/font.ac079950fd98.woff2",
+    "assets/a92e6bec-a7fc-444d-8f57-7e9c5607de1b.woff2": "/assets/font.500d3bfa4e42.woff2",
+    "assets/2f0ec585-4275-4b37-a606-c5559b10a9d0.woff2": "/assets/font.f7a7830b81e3.woff2",
+    "assets/3663852c-8335-4f59-b81a-d8fce51e041a.woff2": "/assets/font.482366a12be7.woff2",
+    "assets/a6e3137e-a1c1-4c27-b333-fe69f9715dc5.woff2": "/assets/font.69eb3fa1ef78.woff2",
+    "assets/8492721b-b746-4eb3-b6c5-b2df46e5577d.svg": "/assets/brand.84c2ff30a2bc.svg"
+  },
+  "totals": {
+    "assetBytes": 21131045,
+    "uniqueAssets": 38,
+    "referencedSourceAssets": 74
+  }
+}

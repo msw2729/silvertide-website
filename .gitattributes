@@ -1,0 +1,2 @@
+# Content hashes must match the exact asset bytes shipped to Vercel.
+/assets/** -text
