@@ -1,7 +1,7 @@
 SILVERTIDE — ENGLISH / SPANISH EDITION
 Reviewed 11 October 2026
 
-All five current pages have a Spanish counterpart. The EN / ES switch stays on the corresponding page and preserves the current section. Menus, image descriptions, accessibility labels, careers filters, form labels, product choices, email subjects, draft-email content and video controls are localized.
+All five current pages have a Spanish counterpart. The EN / ES switch stays on the corresponding page and preserves the current section. Menus, image descriptions, accessibility labels, careers filters, form labels, product choices, email subjects, submission status messages and video controls are localized.
 
 The language is professional Latin American Spanish, with consistent direct address. The company name, street address, city, province, postal code, phone number, email and Silvertide brand identity are preserved. The country label is localized as Canadá, including address and footer location lines.
 The Spanish header and footer use a localized logo with the tagline DISTRIBUCIÓN DE ENERGÍA. The brand name and wave mark remain unchanged. The language selector keeps the literal labels EN / ES and opts out of automatic translation. The example email placeholder is nombre@empresa.com, and the globe uses the Spanish place name Róterdam.
@@ -31,7 +31,7 @@ Industry terms remain contextual. Mercado spot is retained for the spot-market b
 
 MEANING CHECKS
 The homepage promise is “Energía confiable en un mundo impredecible.” The Spanish preserves the intended reliability message without turning it into a fixed-price promise. Contract pricing can still be fixed, formula-based or hybrid, as specified in the English services page.
-The Careers page explicitly welcomes expressions of interest and says the listed areas are not open vacancies. The Contact form explicitly prepares a draft for review and sending in the visitor’s own email application.
+The Careers page explicitly welcomes expressions of interest and says the listed areas are not open vacancies. The Contact form submits directly through Formspree, with localized sending, success and error messages.
 The translation was checked in two passes for terminology and meaning. Alternatives that could imply formal guarantees or replace a spot-market basis with a voyage-contract form were corrected.
 
 TERMINOLOGY REFERENCES

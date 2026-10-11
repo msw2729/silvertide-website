@@ -6,7 +6,7 @@ The website ZIP includes the current English and Spanish pages and supporting as
 All images, fonts for English and Spanish, and JavaScript dependencies are packaged locally. For best navigation compatibility, serve this directory using any static web server.
 The original export uses a client-side component runtime; modern browsers are required.
 Confirmed company details: Silver Tide Global Inc; Unit 2, 2900 John Street, Markham, Ontario L3R 5G3, Canada; info@silvertideglobal.com; +1-416-764-5706. Business hours have not been supplied.
-The Contact form prepares an email draft addressed to info@silvertideglobal.com. Visitors review and send that draft in their own email application. The website does not send or store enquiries through a submission backend.
+The English and Spanish Contact forms submit to Formspree using native fetch and HTML POST. Direct email links remain unchanged. See README.md for setup and testing details.
 The Careers page describes general areas of interest and accepts career enquiries by email. These are not advertised current vacancies.
 Open Silvertide-Content-Next-Steps.txt for remaining owner-supplied content, SPANISH-TRANSLATION-NOTES.txt for terminology decisions, and MOBILE-AND-LANGUAGE-QA.txt for validation details.
 The nine photos were created using the built-in Image Generation tool; exact prompts are in image-prompts.json. They depict generic industry scenes and illustrative people.

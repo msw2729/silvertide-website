@@ -14,7 +14,7 @@ INFORMATION TO ADD NEXT
 3. Official LinkedIn company URL.
 4. Approved privacy, legal and cookie notices, plus any actual code of conduct or compliance documents that may be shared. Placeholder policy links have been removed; no legal policies have been invented.
 5. Confirmed open positions, locations, employment terms and application instructions before publishing actual vacancies.
-6. A contact-form delivery service if direct website submission is wanted. The current enquiry flow prepares an email draft; the visitor sends it from their email application.
+6. Verify the configured Formspree target inbox and, with permission, perform a real delivery test. The English and Spanish forms now submit directly through the supplied Formspree endpoint.
 
 BEFORE PUBLICATION
 Review the existing service descriptions, regional coverage and company claims against actual capabilities. Confirm any response-time or employment commitments before adding them.

@@ -217,6 +217,8 @@ h1,h2,h3{margin:0;font-weight:300;color:#0E1620}
 @keyframes pop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 .menu{animation:pop .35s cubic-bezier(.16,.8,.2,1) both}
 /* Contact: hairline form fields */
+form button[hidden]{display:none}
+form button:disabled{opacity:.65;cursor:default}
 .fld{display:flex;flex-direction:column;gap:6px;min-width:0}
 .fld label{font-size:12px;font-weight:500;letter-spacing:0.01em;color:#5E6B78}
 .in{width:100%;box-sizing:border-box;min-height:48px;padding:10px 0;border:0;border-bottom:1px solid #C9D2DB;border-radius:0;background:transparent;font-family:inherit;font-size:15px;font-weight:400;color:#0E1620;transition:border-color .2s ease}
@@ -296,7 +298,7 @@ select.in{appearance:none;-webkit-appearance:none;padding-right:32px;cursor:poin
             <h1 style="flex: 999 1 560px; min-width: 0; font-size: min(clamp(48px, 7vw, 112px), 11.5vh); line-height: 0.9; letter-spacing: -0.03em; font-weight: 300; color: #FFFFFF; text-wrap: balance"><span class="mw"><span style="animation-delay: 0.3s">Hablemos</span></span> <span class="mw"><span style="animation-delay: 0.36s">de</span></span> <span class="mw"><span style="animation-delay: 0.42s">tu</span></span> <span class="mw"><span style="animation-delay: 0.48s">suministro.</span></span></h1>
 
             <nav class="rise d3" aria-label="En esta página" style="flex: 0 1 320px; min-width: 0; display: flex; flex-direction: column; border-bottom: 1px solid rgba(255, 255, 255, 0.32)">
-              <a class="jl" href="#enquiry"><span style="font-size: 12px; color: #C9D3DD">01</span>Prepara una consulta<svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12l7 7 7-7"></path></svg></a>
+              <a class="jl" href="#enquiry"><span style="font-size: 12px; color: #C9D3DD">01</span>Envía una consulta<svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12l7 7 7-7"></path></svg></a>
               <a class="jl" href="#direct"><span style="font-size: 12px; color: #C9D3DD">02</span>Contacto directo<svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12l7 7 7-7"></path></svg></a>
               <a class="jl" href="#offices"><span style="font-size: 12px; color: #C9D3DD">03</span>Datos de la empresa<svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12l7 7 7-7"></path></svg></a>
             </nav>
@@ -308,11 +310,11 @@ select.in{appearance:none;-webkit-appearance:none;padding-right:32px;cursor:poin
       <section id="enquiry" style="position: relative; z-index: 1; background: #FFFFFF; view-timeline-name: --curtain; padding: clamp(64px, 7vw, 104px) clamp(16px, 2.4vw, 32px); box-sizing: border-box">
         <div style="max-width: 1376px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 56px clamp(40px, 6vw, 112px)">
 
-          <form sc-camel-on-submit="{{prepareEnquiry}}" style="flex: 1.4 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 36px">
+          <form action="https://formspree.io/f/xppqljkw" method="POST" aria-describedby="enquiry-status" aria-busy="{{enquirySending}}" sc-camel-on-submit="{{submitEnquiry}}" style="flex: 1.4 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 36px">
             <div style="display: flex; flex-direction: column; gap: 16px">
-              <span class="over">Prepara una consulta</span>
+              <span class="over">Envía una consulta</span>
               <h2 style="font-size: clamp(40px, 4.4vw, 62px); line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance">¿Qué suministro necesitas?</h2>
-              <p style="margin: 0; max-width: 560px; font-family: Lora, Georgia, serif; font-size: 17px; line-height: 1.5; letter-spacing: 0.011em; color: #3B4652">Indica el producto, el volumen, las fechas y el destino. Este formulario prepara un borrador en tu aplicación de correo para que lo revises y lo envíes.</p>
+              <p style="margin: 0; max-width: 560px; font-family: Lora, Georgia, serif; font-size: 17px; line-height: 1.5; letter-spacing: 0.011em; color: #3B4652">Indica el producto, el volumen, las fechas y el destino. Envía tu consulta directamente mediante este formulario.</p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 28px 32px">
               <div class="fld"><label for="c-name">Nombre completo (obligatorio)</label><input class="in" id="c-name" name="name" type="text" required="{{true}}" autocomplete="name" placeholder="Tu nombre"></div>
@@ -323,11 +325,15 @@ select.in{appearance:none;-webkit-appearance:none;padding-right:32px;cursor:poin
               <div class="fld"><label for="c-volume">Volumen estimado y ventana de entrega</label><input class="in" id="c-volume" name="volume" type="text" placeholder="Ej.: 50 mil b/d desde el T3"></div>
               <div class="fld" style="grid-column: 1 / -1"><label for="c-msg">Mensaje (obligatorio)</label><textarea class="in" id="c-msg" name="message" required="{{true}}" placeholder="Destino, especificaciones, duración del contrato y cualquier otro detalle que nos ayude a entender tu requerimiento."></textarea></div>
             </div>
-            <p style="margin: 0; max-width: 640px; font-size: 14px; line-height: 1.5; color: #5E6B78">Selecciona Abrir borrador de correo para continuar en tu aplicación de correo. Revisa los datos y envíalo cuando esté listo. Si la aplicación no se abre, escribe a la dirección que aparece a continuación.</p>
+            <p style="margin: 0; max-width: 640px; font-size: 14px; line-height: 1.5; color: #5E6B78">Revisa tus datos y selecciona Enviar consulta. También puedes escribirnos a la dirección de correo que aparece a continuación.</p>
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
-              <button type="submit" class="po pf">Abrir borrador de correo <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></button>
+              <button type="submit" class="po pf" disabled="{{enquiryDisabled}}">{{enquiryButton}} <svg aria-hidden="true" width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></button>
               <span style="font-size: 14px; line-height: 1.45; color: #5E6B78">¿Prefieres escribir directamente? Escríbenos a <a href="mailto:info@silvertideglobal.com?subject=Consulta%20de%20suministro" style="color: #0B2A5E; font-weight: 500">info@silvertideglobal.com</a></span>
             </div>
+            <p id="enquiry-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" style="margin: 0; font-size: 15px; line-height: 1.5; color: #0B2A5E">{{enquiryStatus}}</p>
+            <button type="button" class="po pf" hidden="{{!enquirySent}}" sc-camel-on-click="{{newEnquiry}}" style="align-self: flex-start">Enviar otra consulta</button>
+            <input type="hidden" name="_subject" value="Consulta del sitio web de Silver Tide">
+            <input type="hidden" name="language" value="es">
           </form>
 
           <div id="direct" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
@@ -478,33 +484,53 @@ class Component extends DCLogic {
     super(props);
     this.state = { menu: false };
   }
-  prepareEnquiry(event) {
+  async submitEnquiry(event) {
     event.preventDefault();
+    // Instance lock is synchronous: React state updates alone cannot stop rapid repeats.
+    if (this.enquiryPending || this.state.enquirySent) return;
     var form = event.currentTarget;
     if (!form.reportValidity()) return;
     var data = new FormData(form);
-    var value = (key) => String(data.get(key) || '').trim();
-    var product = value('product').replace(/[\r\n]+/g, ' ');
-    var subject = "Consulta de suministro" + (product ? ' - ' + product : '');
-    var body = [
-      "Nombre: " + value('name'),
-      "Correo electrónico: " + value('email'),
-      "Empresa: " + value('company'),
-      "Teléfono: " + value('phone'),
-      "Producto: " + product,
-      "Volumen estimado y ventana de entrega: " + value('volume'),
-      '',
-      "Mensaje:",
-      value('message')
-    ].join('\r\n');
-    window.location.href = 'mailto:info@silvertideglobal.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    this.enquiryPending = true;
+    this.setState({ enquirySending: true, enquiryStatus: "Enviando…" });
+    var controller = new AbortController();
+    var timeout = setTimeout(() => controller.abort(), 30000);
+    try {
+      var response = await fetch(form.action, {
+        method: 'POST', body: data,
+        headers: { Accept: 'application/json' }, signal: controller.signal
+      });
+      if (!response.ok) {
+        this.setState({ enquiryStatus: response.status === 422 ? "Revisa los campos obligatorios e introduce una dirección de correo válida." : "No pudimos confirmar el envío. Tus datos siguen aquí. Inténtalo de nuevo o utiliza la dirección de correo que aparece a continuación." });
+        return;
+      }
+      this.setState({ enquirySent: true, enquiryStatus: "Gracias. Tu consulta se ha enviado." });
+    } catch (_) {
+      this.setState({ enquiryStatus: "No pudimos confirmar el envío. Tus datos siguen aquí. Inténtalo de nuevo o utiliza la dirección de correo que aparece a continuación." });
+    } finally {
+      clearTimeout(timeout);
+      this.enquiryPending = false;
+      this.setState({ enquirySending: false });
+      form.querySelector('#enquiry-status').focus();
+    }
+  }
+  newEnquiry(event) {
+    event.currentTarget.form.reset();
+    this.setState({ enquirySent: false, enquiryStatus: '' });
+    event.currentTarget.form.elements.name.focus();
   }
   renderVals() {
     var accent = this.props.accent ?? '#2E7BD6';
     var open = !!this.state.menu;
     return {
       accent: accent,
-      prepareEnquiry: (event) => this.prepareEnquiry(event),
+      submitEnquiry: (event) => this.submitEnquiry(event),
+      newEnquiry: (event) => this.newEnquiry(event),
+      enquirySending: !!this.state.enquirySending,
+      enquirySent: !!this.state.enquirySent,
+      enquiryDisabled: !!(this.state.enquirySending || this.state.enquirySent),
+      enquiryStatus: this.state.enquiryStatus || '',
+      enquiryButton: this.state.enquirySending ? "Enviando…" : this.state.enquirySent ? "Consulta enviada" : "Enviar consulta",
       menuOpen: open, menuLabel: open ? "Cerrar" : "Menú",
       menuIcon: open ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
       toggleMenu: () => this.setState({ menu: !this.state.menu })

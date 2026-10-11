@@ -44,4 +44,4 @@ English and Spanish contact handlers passed isolated Unicode, newline, optional-
 The final ZIP was checked for corruption and excludes archived concepts.
 
 SCOPE OF VERIFICATION
-These are responsive browser previews and local functional checks, not physical iPhone/Android or Safari device certification. A final check on the actual hosted URL remains appropriate after deployment. The contact flow still requires the visitor's email application; this update does not add a form-delivery backend.
+These are responsive browser previews and local functional checks, not physical iPhone/Android or Safari device certification. A final check on the actual hosted URL remains appropriate after deployment. The Contact forms now submit through Formspree; see README.md and tests/formspree.cjs for the current mocked submission checks.

@@ -1,1 +1,21 @@
 # silvertide-website
+
+Static bilingual site using the bundled DCLogic/React runtime. Serve this directory with a static web server; no build or external form SDK is required.
+
+## Contact forms
+
+`Contact.dc.html` and `Contact.es.dc.html` POST all seven existing fields to `https://formspree.io/f/xppqljkw`. The DCLogic submit handler uses native `fetch`, `FormData`, and `Accept: application/json`. Localized status text is announced in a live region and focused after completion. Required name, email and message fields retain native browser validation.
+
+Submission is locked while pending and after success. Errors and the 30-second timeout retain inputs and allow a manual retry; there are no automatic retries. A timed-out request may have reached Formspree, so the error says confirmation was unavailable. After success, “Send another enquiry” clears the form deliberately. HTTP success confirms endpoint acceptance, not inbox delivery.
+
+The endpoint's target inbox, verification, domain restrictions and spam/CAPTCHA settings are managed in the Formspree dashboard. No recipient override or private inbox address is embedded in the site. Dashboard routing and real email delivery have not been verified. All existing direct email links, including About and Careers, remain unchanged.
+
+The form keeps standard HTML `action` and `method` attributes, but this exported site's DCLogic runtime is required to render the interactive site. Do not describe the whole site as a JavaScript-free fallback.
+
+Official references: [HTML forms](https://help.formspree.io/articles/building-your-form/building-an-html-form), [AJAX handling](https://help.formspree.io/articles/building-your-form/submit-forms-with-javascript-ajax/), [email subjects](https://help.formspree.io/articles/building-your-form/email-subject-line).
+
+## Mocked browser checks
+
+With Node.js, Playwright and Chromium available, run `node tests/formspree.cjs`. Set `CHROME_PATH` to an installed Chrome executable if needed. Playwright is test tooling only; it is not a site dependency. The test starts its own local server, blocks external resources and intercepts every Formspree request. It never sends real inquiries.
+
+Checks cover both languages, required fields, email validity, all submitted fields, localized pending/success/422/500/network states, repeated submits, retry, deliberate reset, accessibility focus, existing menu re-renders, mobile overflow and preservation of every original direct email link.
