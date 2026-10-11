@@ -7,53 +7,53 @@
   "routeBudgets": [
     {
       "route": "/",
-      "allNonVideoBytes": 619268,
-      "documentScriptsCssFontsBytes": 352569
+      "allNonVideoBytes": 622535,
+      "documentScriptsCssFontsBytes": 355836
     },
     {
       "route": "/es/",
-      "allNonVideoBytes": 626273,
-      "documentScriptsCssFontsBytes": 353942
+      "allNonVideoBytes": 629783,
+      "documentScriptsCssFontsBytes": 357452
     },
     {
       "route": "/what-we-do/",
-      "allNonVideoBytes": 1498594,
-      "documentScriptsCssFontsBytes": 341015
+      "allNonVideoBytes": 1498606,
+      "documentScriptsCssFontsBytes": 341027
     },
     {
       "route": "/es/que-hacemos/",
-      "allNonVideoBytes": 1505511,
-      "documentScriptsCssFontsBytes": 342300
+      "allNonVideoBytes": 1505523,
+      "documentScriptsCssFontsBytes": 342312
     },
     {
       "route": "/about/",
-      "allNonVideoBytes": 793745,
-      "documentScriptsCssFontsBytes": 336168
+      "allNonVideoBytes": 793757,
+      "documentScriptsCssFontsBytes": 336180
     },
     {
       "route": "/es/quienes-somos/",
-      "allNonVideoBytes": 800544,
-      "documentScriptsCssFontsBytes": 337335
+      "allNonVideoBytes": 800556,
+      "documentScriptsCssFontsBytes": 337347
     },
     {
       "route": "/careers/",
-      "allNonVideoBytes": 471655,
-      "documentScriptsCssFontsBytes": 336594
+      "allNonVideoBytes": 471667,
+      "documentScriptsCssFontsBytes": 336606
     },
     {
       "route": "/es/trabaja-con-nosotros/",
-      "allNonVideoBytes": 478355,
-      "documentScriptsCssFontsBytes": 337662
+      "allNonVideoBytes": 478367,
+      "documentScriptsCssFontsBytes": 337674
     },
     {
       "route": "/contact/",
-      "allNonVideoBytes": 596743,
-      "documentScriptsCssFontsBytes": 336394
+      "allNonVideoBytes": 596755,
+      "documentScriptsCssFontsBytes": 336406
     },
     {
       "route": "/es/contacto/",
-      "allNonVideoBytes": 603163,
-      "documentScriptsCssFontsBytes": 337182
+      "allNonVideoBytes": 603175,
+      "documentScriptsCssFontsBytes": 337194
     }
   ],
   "errors": [],

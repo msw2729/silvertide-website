@@ -1,75 +1,75 @@
 {
-  "origin": "https://silvertideglobal.com",
+  "origin": "https://www.silvertideglobal.com",
   "routes": [
     {
       "source": "Main.dc.html",
       "route": "/",
       "locale": "en",
       "file": "index.html",
-      "bytes": 58860
+      "bytes": 62827
     },
     {
       "source": "Main.es.dc.html",
       "route": "/es/",
       "locale": "es",
       "file": "es/index.html",
-      "bytes": 60233
+      "bytes": 64443
     },
     {
       "source": "WhatWeDo.dc.html",
       "route": "/what-we-do/",
       "locale": "en",
       "file": "what-we-do/index.html",
-      "bytes": 47306
+      "bytes": 47799
     },
     {
       "source": "WhatWeDo.es.dc.html",
       "route": "/es/que-hacemos/",
       "locale": "es",
       "file": "es/que-hacemos/index.html",
-      "bytes": 48591
+      "bytes": 49084
     },
     {
       "source": "About.dc.html",
       "route": "/about/",
       "locale": "en",
       "file": "about/index.html",
-      "bytes": 42459
+      "bytes": 42939
     },
     {
       "source": "About.es.dc.html",
       "route": "/es/quienes-somos/",
       "locale": "es",
       "file": "es/quienes-somos/index.html",
-      "bytes": 43626
+      "bytes": 44106
     },
     {
       "source": "Careers.dc.html",
       "route": "/careers/",
       "locale": "en",
       "file": "careers/index.html",
-      "bytes": 42885
+      "bytes": 43382
     },
     {
       "source": "Careers.es.dc.html",
       "route": "/es/trabaja-con-nosotros/",
       "locale": "es",
       "file": "es/trabaja-con-nosotros/index.html",
-      "bytes": 43953
+      "bytes": 44450
     },
     {
       "source": "Contact.dc.html",
       "route": "/contact/",
       "locale": "en",
       "file": "contact/index.html",
-      "bytes": 42685
+      "bytes": 43206
     },
     {
       "source": "Contact.es.dc.html",
       "route": "/es/contacto/",
       "locale": "es",
       "file": "es/contacto/index.html",
-      "bytes": 43473
+      "bytes": 43994
     }
   ],
   "legacy": {
